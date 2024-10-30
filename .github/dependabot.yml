@@ -1,0 +1,16 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: "."
+    schedule:
+      interval: weekly
+      time: '11:00'
+      timezone: Asia/Seoul
+    open-pull-requests-limit: 10
+    target-branch: develop
+    reviewers:
+      - "Seolhun"
+    labels:
+      - "Dependencies"
+

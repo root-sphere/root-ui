@@ -1,0 +1,18 @@
+node_modules/
+build/
+config/
+dist/
+test/
+
+coverage
+.eslintrc.js
+jest.config.js
+postcss.config.js
+tailwind.config.js
+babel.config.js
+webpack.*.js
+*.d.ts
+
+# JetBrains
+.next
+.idea

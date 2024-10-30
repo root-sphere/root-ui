@@ -1,0 +1,80 @@
+{
+  "license": "MIT",
+  "author": {
+    "name": "root-sphere",
+    "email": "shun10116@gmail.com",
+    "url": "https://github.com/root-sphere"
+  },
+  "name": "@root-sphere/root-ui",
+  "description": "root-ui is a design system for React and tailwindcss.",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md",
+    "package.json",
+    "tailwind.config.js"
+  ],
+  "types": "dist/legacy/index.d.ts",
+  "main": "dist/legacy/index.js",
+  "module": "dist/legacy/index.mjs",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/modern/index.d.mts",
+        "default": "./dist/modern/index.mjs"
+      },
+      "require": {
+        "types": "./dist/modern/index.d.ts",
+        "default": "./dist/modern/index.js"
+      }
+    },
+    "./modern/index.css": "./dist/modern/index.css",
+    "./legacy/index.css": "./dist/legacy/index.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "type:check": "tsc --noEmit --project tsconfig.build.json",
+    "prebuild": "rimraf dist/*",
+    "build": "tsup",
+    "test": "vitest run",
+    "prettier": "prettier --write './src/**/*.{ts,tsx,js,jsx}'",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
+    "storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build -o docs"
+  },
+  "keywords": [
+    "react",
+    "tailwind",
+    "ui"
+  ],
+  "engines": {
+    "node": ">= 16.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "tailwindcss": ">=3.0.0"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.26.23",
+    "@fxts/core": "^1.0.0",
+    "@root-sphere/root-ui-tailwind": "workspace:*",
+    "clsx": "^1.2.1",
+    "framer-motion": "^11.2.12",
+    "tailwind-variants": "^0.2.1"
+  },
+  "devDependencies": {
+    "@heroicons/react": "2",
+    "@root-sphere/root-eslint": "workspace:*",
+    "@root-sphere/root-tsconfig": "workspace:*",
+    "styled-components": "^6.1.13"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "name": "@root-sphere/root-tsconfig",
+  "version": "0.0.1"
+}

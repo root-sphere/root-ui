@@ -1,0 +1,40 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "clear": {
+      "cache": false
+    },
+    "lint": {
+      "cache": false
+    },
+    "lint:fix": {
+      "cache": false
+    },
+    "test": {
+      "cache": true
+    },
+    "type:check": {
+      "cache": true
+    },
+    "storybook": {
+      "cache": false,
+      "persistent": false
+    },
+    "build:storybook": {
+      "cache": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "cache": true
+    },
+    "start": {
+      "cache": false,
+      "persistent": false
+    },
+    "start:dev": {
+      "cache": false,
+      "persistent": false
+    }
+  }
+}

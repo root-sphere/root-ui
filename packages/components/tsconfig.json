@@ -1,0 +1,26 @@
+{
+  "extends": "@root-sphere/root-tsconfig/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    },
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.cjs",
+    "**/*.mjs",
+    "@types"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
+}
