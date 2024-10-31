@@ -27,9 +27,11 @@ export default plugin(function () {}, {
       // @see https://tailwindcss.com/docs/customizing-colors
       colors: {
         ...colors,
+        primary: 'var(--primary-color)',
         inherit: 'inherit',
         transparent: 'transparent',
       },
+      spacing: {},
     },
     screens: {
       lg: '1024px',

@@ -1,14 +1,13 @@
-import clsx from 'clsx';
 import { tv, VariantProps } from 'tailwind-variants';
 
 export const buttonStyles = tv({
-  base: clsx(
+  base: [
     'btn',
     'border border-solid',
     'outline-none',
     'cursor-pointer',
     'disabled:cursor-not-allowed disabled:opacity-85',
-  ),
+  ],
   variants: {
     intent: {
       accent: '',
@@ -16,17 +15,10 @@ export const buttonStyles = tv({
       faint: '',
       info: '',
       neutral: '',
-      primary: '',
+      primary: 'bg-primary',
       secondary: '',
       success: '',
       warning: '',
-    },
-    scale: {
-      lg: 'btn-scale-lg',
-      md: 'btn-scale-md',
-      sm: 'btn-scale-sm',
-      xl: 'btn-scale-xl',
-      xs: 'btn-scale-xs',
     },
     variant: {
       outlined: 'outlined',

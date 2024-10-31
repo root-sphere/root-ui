@@ -10,7 +10,7 @@ type ElementProps = React.ButtonHTMLAttributes<ElementType>;
 export type ButtonProps = ElementProps & ButtonVariants;
 
 export const Button = React.forwardRef<ElementType, ButtonProps>(
-  ({ children, className, intent = 'primary', scale = 'md', variant = 'solid', ...others }, ref) => {
+  ({ children, className, intent = 'primary', variant = 'solid', ...others }, ref) => {
     return (
       <button
         type="button"
@@ -21,7 +21,6 @@ export const Button = React.forwardRef<ElementType, ButtonProps>(
           CLASSNAME,
           buttonStyles({
             intent,
-            scale,
             variant,
           }),
           className,

@@ -2,12 +2,6 @@
 
 Root UI built with TypeScript, React and TailwindCSS.
 
-- atomics
-- combinations
-- forms
-- layouts
-- typography
-
 > Each directories will be separated to each packages.
 
 ## Prerequisites
@@ -54,7 +48,7 @@ pnpm run storybook
 pnpm run build:storybook
 ```
 
-### Test
+### Test (with Vitest)
 
 ```bash
 pnpm run test

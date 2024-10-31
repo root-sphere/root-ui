@@ -1,4 +1,3 @@
-import { intentMap, scaleMap } from '@root-sphere/root-ui-tailwind';
 import { StoryObj } from '@storybook/react/*';
 import * as React from 'react';
 
@@ -11,13 +10,9 @@ export default {
     intent: {
       control: {
         type: 'select',
-        options: intentMap,
-      },
-    },
-    scale: {
-      control: {
-        type: 'select',
-        options: scaleMap,
+        options: {
+          primary: 'primary',
+        },
       },
     },
   },
@@ -33,7 +28,9 @@ const ButtonsStories = ({ children, ...others }: ButtonProps) => {
   return (
     <StorybookContent>
       <StorybookContent.Light className="flex-col">
-        <BaseTemplate {...others}>{children}</BaseTemplate>
+        <BaseTemplate {...others} intent="primary">
+          {children}
+        </BaseTemplate>
       </StorybookContent.Light>
       <StorybookContent.Dark className="flex-col">
         <BaseTemplate {...others}>{children}</BaseTemplate>
