@@ -88,7 +88,7 @@
     "react-popper": "^2.3.0",
     "rimraf": "^5.0.10",
     "sass": "^1.78.0",
-    "sass-loader": "^14.2.1",
+    "sass-loader": "^16.0.2",
     "storybook": "^8.2.9",
     "style-loader": "^4.0.0",
     "ts-essentials": "^9.4.2",
