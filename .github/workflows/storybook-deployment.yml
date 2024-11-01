@@ -10,6 +10,7 @@ jobs:
   storybook-ci-cd:
     runs-on: ubuntu-latest
     env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PUBLIC_NPM_TOKEN: ${{secrets.PUBLIC_NPM_TOKEN}}
 
     steps:
