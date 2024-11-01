@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Continuous Deployment
     env:
-      GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
       PUBLIC_NPM_TOKEN: ${{secrets.PUBLIC_NPM_TOKEN}}
 
     steps:
@@ -35,5 +34,4 @@ jobs:
           version: pnpm changeset:version
           publish: pnpm changeset:publish
         env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
           PUBLIC_NPM_TOKEN: ${{secrets.PUBLIC_NPM_TOKEN}}
