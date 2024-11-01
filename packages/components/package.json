@@ -73,8 +73,6 @@
   },
   "devDependencies": {
     "@heroicons/react": "2",
-    "@root-sphere/root-eslint": "workspace:*",
-    "@root-sphere/root-tsconfig": "workspace:*",
     "styled-components": "^6.1.13"
   }
 }

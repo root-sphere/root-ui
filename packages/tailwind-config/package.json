@@ -47,8 +47,6 @@
     "tailwindcss": ">=3.0.0"
   },
   "dependencies": {
-    "@fxts/core": "^1.0.0",
-    "@root-sphere/root-eslint": "workspace:*",
-    "@root-sphere/root-tsconfig": "workspace:*"
+    "@fxts/core": "^1.0.0"
   }
 }

@@ -43,6 +43,8 @@
     "@changesets/cli": "^2.27.8",
     "@chromatic-com/storybook": "^1.8.0",
     "@seolhun/eslint-config": "1.4.0-alpha.2",
+    "@root-sphere/root-eslint": "workspace:*",
+    "@root-sphere/root-tsconfig": "workspace:*",
     "@storybook/addon-actions": "^8.2.9",
     "@storybook/addon-docs": "^8.2.9",
     "@storybook/addon-essentials": "^8.2.9",
