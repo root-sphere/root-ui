@@ -6,7 +6,7 @@ import { addons } from '@storybook/manager-api';
 addons.setConfig({
   isFullscreen: false,
   showNav: true,
-  showPanel: true,
+  showPanel: false,
   panelPosition: 'right',
   enableShortcuts: true,
   isToolshown: true,

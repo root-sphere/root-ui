@@ -40,9 +40,9 @@ export const StorybookContentItem = ({
     <div
       {...others}
       className={clsx(className, 'StorybookContentItem', 'relative', 'flex flex-1 ', 'min-h-full', {
-        'gap-4': !noGap,
+        'gap-2': !noGap,
         'items-center justify-center': !noAlign,
-        'py-12 px-24': !noPadding,
+        'py-2 px-3': !noPadding,
       })}
       ref={setRoot}
     >
