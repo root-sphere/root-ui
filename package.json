@@ -96,7 +96,7 @@
     "ts-essentials": "^9.4.2",
     "tslib": "^2.7.0",
     "tsup": "^8.2.4",
-    "turbo": "^2.1.1",
+    "turbo": "^2.2.3",
     "typescript": "5.6.3",
     "vitest": "^1.6.0",
     "webpack": "^5.94.0",
