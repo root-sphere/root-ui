@@ -23,6 +23,9 @@ export default plugin(function () {}, {
    * @see https://tailwindcss.com/docs/theme
    */
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       // @see https://tailwindcss.com/docs/customizing-colors
       colors: {
@@ -45,6 +48,36 @@ export default plugin(function () {}, {
         '24': 'repeat(24, minmax(0, 1fr))',
       },
       spacing: {},
+      theme: {
+        extend: {
+          fontSize: {
+            'body-1': ['var(--font-size-body-1)', 'var(--line-height-body-1)'],
+            'body-2': ['var(--font-size-body-2)', 'var(--line-height-body-2)'],
+            caption: ['var(--font-size-caption)', 'var(--line-height-caption)'],
+            h1: ['var(--font-size-h1)', 'var(--line-height-h1)'],
+            h2: ['var(--font-size-h2)', 'var(--line-height-h2)'],
+            h3: ['var(--font-size-h3)', 'var(--line-height-h3)'],
+            h4: ['var(--font-size-h4)', 'var(--line-height-h4)'],
+            h5: ['var(--font-size-h5)', 'var(--line-height-h5)'],
+            h6: ['var(--font-size-h6)', 'var(--line-height-h6)'],
+            label: ['var(--font-size-label)', 'var(--line-height-label)'],
+            'title-1': ['var(--font-size-title-1)', 'var(--line-height-title-1)'],
+            'title-2': ['var(--font-size-title-2)', 'var(--line-height-title-2)'],
+            'title-3': ['var(--font-size-title-3)', 'var(--line-height-title-3)'],
+            tooltip: ['var(--font-size-tooltip)', 'var(--line-height-tooltip)'],
+          },
+          fontWeight: {
+            bold: 'var(--font-weight-bold)',
+            medium: 'var(--font-weight-medium)',
+            regular: 'var(--font-weight-regular)',
+            semibold: 'var(--font-weight-semibold)',
+          },
+          letterSpacing: {
+            default: 'var(--letter-spacing-default)',
+            tight: 'var(--letter-spacing-tight)',
+          },
+        },
+      },
     },
     screens: {
       lg: '1024px',

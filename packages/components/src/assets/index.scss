@@ -145,4 +145,46 @@
   --secondary-8-color: env(--secondary-8-color, #2e3bb8);
   --secondary-9-color: env(--secondary-9-color, #232e8f);
   --secondary-10-color: env(--secondary-10-color, #1a2366);
+
+  /* Font Size Variables */
+  --font-size-h6: 3rem;
+  --font-size-h5: 2.5rem;
+  --font-size-h4: 2.25rem;
+  --font-size-h3: 2rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h1: 1.5rem;
+  --font-size-title-3: 1.25rem;
+  --font-size-title-2: 1.125rem;
+  --font-size-title-1: 1rem;
+  --font-size-body-2: 1rem;
+  --font-size-body-1: 0.875rem;
+  --font-size-label: 0.875rem;
+  --font-size-tooltip: 0.875rem;
+  --font-size-caption: 0.75rem;
+
+  /* Line Height Variables */
+  --line-height-h6: 3.625rem;
+  --line-height-h5: 3rem;
+  --line-height-h4: 2.875rem;
+  --line-height-h3: 2.5rem;
+  --line-height-h2: 2.25rem;
+  --line-height-h1: 2.125rem;
+  --line-height-title-3: 1.875rem;
+  --line-height-title-2: 1.75rem;
+  --line-height-title-1: 1.625rem;
+  --line-height-body-2: 1.625rem;
+  --line-height-body-1: 1.5rem;
+  --line-height-label: 1.5rem;
+  --line-height-tooltip: 1.5rem;
+  --line-height-caption: 1.125rem;
+
+  /* Font Weight Variables */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Letter Spacing */
+  --letter-spacing-default: 0em;
+  --letter-spacing-tight: -0.05em;
 }

@@ -15,7 +15,7 @@ export const buttonStyles = tv({
       faint: '',
       info: '',
       neutral: '',
-      primary: 'bg-primary',
+      primary: ['bg-primary', 'text-["#fff"]'],
       secondary: '',
       success: '',
       warning: '',

@@ -15,5 +15,6 @@ export default {
     './src/stories/**/*.{ts,tsx,js,jsx}',
   ],
   // https://tailwindcss.com/docs/plugins#adding-base-styles
-  plugins,
+  plugins
+  // prefix: 'rs-',
 }
