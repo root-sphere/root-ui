@@ -70,3 +70,24 @@ const GridsStories = () => {
 export const Grids: StoryObj = {
   render: GridsStories,
 };
+
+const ContainerGridsStories = () => {
+  return (
+    <StorybookContent className="flex flex-col">
+      <StorybookContent.Light className="flex-col" noAlign noGap>
+        <div className="container mx-auto">
+          <GridTemplate />
+        </div>
+      </StorybookContent.Light>
+      <StorybookContent.Dark className="flex-col" noAlign noGap>
+        <div className="container mx-auto">
+          <GridTemplate />
+        </div>
+      </StorybookContent.Dark>
+    </StorybookContent>
+  );
+};
+
+export const ContainerGrids: StoryObj = {
+  render: ContainerGridsStories,
+};
