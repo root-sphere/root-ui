@@ -1,3 +1,4 @@
+import { rootIntentColors } from '@root-sphere/root-ui-tailwind';
 import { StoryObj } from '@storybook/react/*';
 import * as React from 'react';
 
@@ -10,9 +11,10 @@ export default {
     intent: {
       control: {
         type: 'select',
-        options: {
-          primary: 'primary',
-        },
+        options: rootIntentColors.reduce((acc, color) => {
+          acc[color] = color;
+          return acc;
+        }, {}),
       },
     },
   },
@@ -20,20 +22,14 @@ export default {
   title: 'Atomic/Button',
 };
 
-const BaseTemplate = ({ children, ...others }: ButtonProps) => {
-  return <Button {...others}>{children}</Button>;
-};
-
 const ButtonsStories = ({ children, ...others }: ButtonProps) => {
   return (
     <StorybookContent>
       <StorybookContent.Light className="flex-col">
-        <BaseTemplate {...others} intent="primary">
-          {children}
-        </BaseTemplate>
+        <Button {...others}>{children}</Button>;
       </StorybookContent.Light>
       <StorybookContent.Dark className="flex-col">
-        <BaseTemplate {...others}>{children}</BaseTemplate>
+        <Button {...others}>{children}</Button>;
       </StorybookContent.Dark>
     </StorybookContent>
   );
@@ -45,4 +41,37 @@ export const Buttons: StoryObj<ButtonProps> = {
     disabled: false,
   },
   render: ButtonsStories,
+};
+
+const AllButtonTemplate = ({ children, ...others }: ButtonProps) => {
+  return (
+    <>
+      {rootIntentColors.map((intent) => (
+        <Button key={intent} {...others} intent={intent}>
+          {children}-{intent}
+        </Button>
+      ))}
+    </>
+  );
+};
+
+const AllButtonsStories = ({ children, ...others }: ButtonProps) => {
+  return (
+    <StorybookContent>
+      <StorybookContent.Light className="flex-col">
+        <AllButtonTemplate {...others}>{children}</AllButtonTemplate>
+      </StorybookContent.Light>
+      <StorybookContent.Dark className="flex-col">
+        <AllButtonTemplate {...others}>{children}</AllButtonTemplate>
+      </StorybookContent.Dark>
+    </StorybookContent>
+  );
+};
+
+export const AllButtons: StoryObj<ButtonProps> = {
+  args: {
+    children: 'Button',
+    disabled: false,
+  },
+  render: AllButtonsStories,
 };

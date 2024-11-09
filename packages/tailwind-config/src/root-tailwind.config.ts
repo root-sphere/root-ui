@@ -1,7 +1,14 @@
 import colors from 'tailwindcss/colors';
 import plugin from 'tailwindcss/plugin';
 
-import { rootFontSizes, rootFontWeights, rootLetterSpacings, rootLineHeights } from './tokens';
+import {
+  rootFontSizes,
+  rootFontWeights,
+  rootLetterSpacings,
+  rootLineHeights,
+  rootPaletteColors,
+  rootSystemColors,
+} from './tokens';
 
 // addUtilities(), for registering new static utility styles
 // matchUtilities(), for registering new dynamic utility styles
@@ -32,7 +39,8 @@ export default plugin(function () {}, {
       // @see https://tailwindcss.com/docs/customizing-colors
       colors: {
         ...colors,
-        primary: 'var(--primary-color)',
+        ...rootPaletteColors,
+        ...rootSystemColors,
         secondary: 'var(--background-color)',
         cream: 'var(--cream-color)',
         'cream-1': 'var(--cream-1-color)',

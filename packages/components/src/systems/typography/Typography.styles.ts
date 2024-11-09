@@ -25,4 +25,4 @@ export const typography = tv({
   },
 });
 
-export type TypographyVariant = VariantProps<typeof typography>;
+export type TypographyVariants = VariantProps<typeof typography>;

@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
   font-size: 16px;
-  color: var(--text-color, #1b1d1f);
-  background-color: var(--background-color, #f0f0f0);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 *,
@@ -17,8 +16,8 @@ html {
 
 :root {
   /* Undefined Variables */
-  --text-color: var(--text-color, #1b1d1f);
-  --background-color: var(--background-color, #f0f0f0);
+  --text-color: #1b1d1f;
+  --background-color: #f0f0f0;
 
   /* Palette Colors */
   /* Blue */
@@ -140,9 +139,10 @@ html {
   --typography-font-weight-bold: 700;
   --typography-letter-spacing-default: 0em;
 
+
   .dark {
     /* Undefined Variables */
-    --text-color: var(--text-color, #f0f0f0);
-    --background-color: var(--background-color, #1b1d1f);
+    --text-color: #f0f0f0;
+    --background-color: #1b1d1f;
   }
 }
