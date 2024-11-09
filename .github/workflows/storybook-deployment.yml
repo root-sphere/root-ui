@@ -34,5 +34,4 @@ jobs:
       - name: Deploy Storybook
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: storybook
           folder: ./packages/components/docs
