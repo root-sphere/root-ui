@@ -111,8 +111,8 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1(esbuild@0.23.1)
       esbuild-plugin-svgr:
-        specifier: ^2.1.0
-        version: 2.1.0(esbuild@0.23.1)(typescript@5.6.3)
+        specifier: ^3.0.0
+        version: 3.0.0(esbuild@0.23.1)(typescript@5.6.3)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -3567,10 +3567,10 @@ packages:
     peerDependencies:
       esbuild: '>=0.11.14'
 
-  esbuild-plugin-svgr@2.1.0:
-    resolution: {integrity: sha512-BKJOlQvXjLipPDPYfX+N6i2tPxSuVOhlg+hEF/nkQwMwFV6IymvuCRO0wLvf9tGyL3mc3yIZ4n9pfxcCx/7v2Q==}
+  esbuild-plugin-svgr@3.0.0:
+    resolution: {integrity: sha512-8/YuGHKoNVKdcV8HUGFQtAJ16agxzemcX9IvcQvaVKuXqIBDvc5IV9nlPyyHcrgr+IvyKBcljO4wjxrh24DSAQ==}
     peerDependencies:
-      esbuild: ^0.19.1
+      esbuild: ^0.23.0
 
   esbuild-register@3.6.0:
     resolution: {integrity: sha512-H2/S7Pm8a9CL1uhp9OvjwrBh5Pvx0H8qVOxNu8Wed9Y7qv56MPtq+GGM8RJpq6glYJn9Wspr8uw7l55uyinNeg==}
@@ -11312,7 +11312,7 @@ snapshots:
       sass: 1.47.0
       tmp: 0.2.1
 
-  esbuild-plugin-svgr@2.1.0(esbuild@0.23.1)(typescript@5.6.3):
+  esbuild-plugin-svgr@3.0.0(esbuild@0.23.1)(typescript@5.6.3):
     dependencies:
       '@svgr/core': 8.1.0(typescript@5.6.3)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0(typescript@5.6.3))
