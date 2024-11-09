@@ -3,6 +3,11 @@
 }
 
 :root{
+  // Undefined Variables
+  --text-color: env(--text-color, #1b1d1f);
+  --background-color: env(--background-color, #f0f0f0);
+
+  // Colors
   --cream-color: env(--cream-color, #f0f0f0);
   --cream-0-color: env(--cream-0-color, #ffffff);
   --cream-1-color: env(--cream-1-color, #fefefe);
@@ -187,4 +192,9 @@
   /* Letter Spacing */
   --letter-spacing-default: 0em;
   --letter-spacing-tight: -0.05em;
+
+  .dark {
+    --text-color: env(--text-color, #f0f0f0);
+    --background-color: env(--background-color, #1b1d1f);
+  }
 }

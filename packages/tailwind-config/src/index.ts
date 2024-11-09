@@ -6,3 +6,5 @@ export default [
    */
   RootTailwindConfig,
 ];
+
+export * from './tokens';
