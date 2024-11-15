@@ -83,7 +83,7 @@
     "rimraf": "^5.0.10",
     "sass": "^1.78.0",
     "sass-loader": "^14.2.1",
-    "storybook": "^8.2.9",
+    "storybook": "^8.4.4",
     "style-loader": "^4.0.0",
     "ts-essentials": "^9.4.2",
     "tslib": "^2.7.0",
