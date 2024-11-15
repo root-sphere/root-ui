@@ -73,6 +73,15 @@
   },
   "devDependencies": {
     "@heroicons/react": "2",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "@storybook/addon-essentials": "8.2.4",
+    "@storybook/addon-interactions": "8.2.4",
+    "@storybook/addon-links": "8.2.4",
+    "@storybook/addon-onboarding": "8.2.4",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "8.2.4",
+    "@storybook/react": "8.2.4",
+    "@storybook/react-webpack5": "^8.4.1",
+    "@storybook/test": "8.2.4"
   }
 }

@@ -1,10 +1,5 @@
-import RootTailwindConfig from './root-tailwind.config';
+export * from './plugins';
 
-export default [
-  /**
-   * theme is positioned first to allow other plugins to override
-   */
-  RootTailwindConfig,
-];
+import { typographyPlugins, colorPlugins, rootPlugins } from './plugins';
 
-export * from './tokens';
+export default [colorPlugins, typographyPlugins, rootPlugins];

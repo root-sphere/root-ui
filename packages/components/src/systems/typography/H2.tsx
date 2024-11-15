@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-import { typography } from './Typography.styles';
+import { typographyVariants } from './Typography.styles';
 
 const CLASSNAME = 'Root__H2';
 type ElementType = HTMLHeadingElement;
@@ -14,7 +14,7 @@ export const H2 = React.forwardRef<ElementType, H2Props>(
     return (
       <h2
         {...others}
-        className={clsx(CLASSNAME, className, typography({ variant: 'heading-2' }))}
+        className={clsx(CLASSNAME, typographyVariants({ className, variant: 'head-2xl' }))}
         ref={ref}
       >
         {children}

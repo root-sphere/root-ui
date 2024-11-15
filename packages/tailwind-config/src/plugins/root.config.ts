@@ -1,14 +1,4 @@
-import colors from 'tailwindcss/colors';
 import plugin from 'tailwindcss/plugin';
-
-import {
-  rootFontSizes,
-  rootFontWeights,
-  rootLetterSpacings,
-  rootLineHeights,
-  rootPaletteColors,
-  rootSystemColors,
-} from './tokens';
 
 // addUtilities(), for registering new static utility styles
 // matchUtilities(), for registering new dynamic utility styles
@@ -21,7 +11,7 @@ import {
 // config(), for looking up values in the user’s Tailwind configuration
 // corePlugins(), for checking if a core plugin is enabled
 // e(), for manually escaping strings meant to be used in class names
-export default plugin(function () {}, {
+export const rootPlugins = plugin(function () {}, {
   /**
    * @see https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
    */
@@ -36,40 +26,10 @@ export default plugin(function () {}, {
       center: true,
     },
     extend: {
-      // @see https://tailwindcss.com/docs/customizing-colors
-      colors: {
-        ...colors,
-        ...rootPaletteColors,
-        ...rootSystemColors,
-        secondary: 'var(--background-color)',
-        cream: 'var(--cream-color)',
-        'cream-1': 'var(--cream-1-color)',
-        'cream-2': 'var(--cream-2-color)',
-        'cream-3': 'var(--cream-3-color)',
-        inherit: 'inherit',
-        main: 'var(--text-color)',
-        space: 'var(--space-color)',
-        'space-1': 'var(--space-1-color)',
-        'space-2': 'var(--space-2-color)',
-        'space-3': 'var(--space-3-color)',
-        transparent: 'transparent',
-      },
-      fontSize: {
-        ...rootFontSizes,
-      },
-      fontWeight: {
-        ...rootFontWeights,
-      },
       gridTemplateColumns: {
         '16': 'repeat(16, minmax(0, 1fr))',
         '20': 'repeat(20, minmax(0, 1fr))',
         '24': 'repeat(24, minmax(0, 1fr))',
-      },
-      letterSpacing: {
-        ...rootLetterSpacings,
-      },
-      lineHeight: {
-        ...rootLineHeights,
       },
       spacing: {},
     },

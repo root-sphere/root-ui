@@ -1,22 +1,29 @@
+import { join, dirname } from 'path';
 import { merge } from 'webpack-merge'
 import webpackDevConfig from './webpack.common'
 
-export default {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  staticDirs: ['../src/assets'],
+/**
+ * This function is used to resolve the absolute path of a package.
+ * It is needed in projects that use Yarn PnP or are set up within a monorepo.
+ */
+function getAbsolutePath(value) {
+  return dirname(require.resolve(join(value, 'package.json')));
+}
 
-  features: {
-    previewMdx2: true, // 👈 MDX 2 enabled here
-  },
-
+/** @type { import('@storybook/react-webpack5').StorybookConfig } */
+const config = {
+  stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-docs',
-    '@storybook/addon-essentials',
-    '@storybook/addon-webpack5-compiler-babel',
-    '@chromatic-com/storybook'
+    getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
+    getAbsolutePath('@storybook/addon-onboarding'),
+    getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-interactions'),
   ],
-
+  framework: {
+    name: getAbsolutePath('@storybook/react-webpack5'),
+    options: {},
+  },
   /**
    * @param {import('webpack').Configuration} config
    */
@@ -24,15 +31,5 @@ export default {
     const nextConfig = merge(config, webpackDevConfig);
     return nextConfig;
   },
-
-  framework: {
-    name: '@storybook/react-webpack5',
-    options: {}
-  },
-
-  docs: {},
-
-  typescript: {
-    reactDocgen: 'react-docgen-typescript'
-  }
 };
+export default config;
