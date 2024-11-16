@@ -1,7 +1,8 @@
+import { fontFamily } from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 import { CSSRuleObject } from 'tailwindcss/types/config';
 
-import { fontSizes, lineHeights } from './typography.presets';
+import { fontSizes, lineHeights } from './typography.tokens';
 
 export const typographyPlugins = plugin(
   function ({ addComponents, theme }) {
@@ -100,6 +101,9 @@ export const typographyPlugins = plugin(
   {
     theme: {
       extend: {
+        fontFamily: {
+          sans: ['Pretendard', ...fontFamily.sans],
+        },
         fontSize: {
           ...fontSizes,
         },

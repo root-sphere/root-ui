@@ -1,2 +1,2 @@
 export * from './typography.plugins';
-export * from './typography.presets';
+export * from './typography.tokens';

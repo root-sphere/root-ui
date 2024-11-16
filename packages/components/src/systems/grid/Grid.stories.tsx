@@ -15,7 +15,7 @@ const GridTemplate = () => {
         key={index}
         className={clsx(
           'h-16',
-          'bg-blue-100 text-space',
+          'bg-primary text-white',
           'flex items-center justify-center rounded',
         )}
       >
@@ -56,7 +56,7 @@ const GridTemplate = () => {
 
 const GridsStories = () => {
   return (
-    <StorybookContent>
+    <StorybookContent className="flex flex-col">
       <StorybookContent.Light className="flex-col" noAlign noGap>
         <GridTemplate />
       </StorybookContent.Light>
@@ -75,12 +75,12 @@ const ContainerGridsStories = () => {
   return (
     <StorybookContent className="flex flex-col">
       <StorybookContent.Light className="flex-col" noAlign noGap>
-        <div className="container mx-auto">
+        <div className={clsx('container')}>
           <GridTemplate />
         </div>
       </StorybookContent.Light>
       <StorybookContent.Dark className="flex-col" noAlign noGap>
-        <div className="container mx-auto">
+        <div className={clsx('container')}>
           <GridTemplate />
         </div>
       </StorybookContent.Dark>

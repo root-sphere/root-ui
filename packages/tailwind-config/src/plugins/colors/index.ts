@@ -1,2 +1,2 @@
 export * from './color.plugins';
-export * from './color.presets';
+export * from './color.tokens';

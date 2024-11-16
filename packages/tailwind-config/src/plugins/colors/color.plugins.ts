@@ -1,7 +1,7 @@
 import colors from 'tailwindcss/colors';
 import plugin from 'tailwindcss/plugin';
 
-import { rootPaletteColors, rootSystemColors } from './color.presets';
+import { rootPaletteColors, rootSystemColors } from './color.tokens';
 
 export const colorPlugins = plugin(function () {}, {
   theme: {
