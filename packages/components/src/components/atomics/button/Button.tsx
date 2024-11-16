@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-import { ButtonVariants, buttonStyles } from './Button.styles';
+import { ButtonVariants, buttonVariants } from './Button.styles';
 
 const CLASSNAME = 'Root__Button';
 type ElementType = HTMLButtonElement;
@@ -17,14 +17,11 @@ export const Button = React.forwardRef<ElementType, ButtonProps>(
         role="button"
         tabIndex={0}
         {...others}
-        className={clsx(
-          CLASSNAME,
-          buttonStyles({
-            intent,
-            variant,
-          }),
-          className,
-        )}
+        className={buttonVariants({
+          className: clsx(CLASSNAME, className),
+          intent,
+          variant,
+        })}
         ref={ref}
       >
         {children}
@@ -32,3 +29,4 @@ export const Button = React.forwardRef<ElementType, ButtonProps>(
     );
   },
 );
+Button.displayName = 'Button';

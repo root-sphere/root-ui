@@ -1,6 +1,4 @@
 import rootPlugins from '@root-sphere/root-ui-tailwind';
-import colors from 'tailwindcss/colors';
-import plugin from 'tailwindcss/plugin';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,6 +12,5 @@ export default {
     './src/systems/**/*.{ts,tsx,js,jsx}',
     './src/stories/**/*.{ts,tsx,js,jsx}',
   ],
-  // https://tailwindcss.com/docs/plugins#adding-base-styles
   plugins: rootPlugins
 }

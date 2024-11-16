@@ -1,7 +1,7 @@
 import { RootIntentColorKey } from '@root-sphere/root-ui-tailwind';
 import { tv, VariantProps } from 'tailwind-variants';
 
-export const buttonStyles = tv({
+export const buttonVariants = tv({
   // Base styles for all buttons
   base: [
     'focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2',
@@ -30,4 +30,4 @@ export const buttonStyles = tv({
   },
 });
 
-export type ButtonVariants = VariantProps<typeof buttonStyles>;
+export type ButtonVariants = VariantProps<typeof buttonVariants>;
