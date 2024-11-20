@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 import * as React from 'react';
 
 import { typographyVariants } from './Typography.styles';
@@ -14,7 +14,7 @@ export const H6 = React.forwardRef<ElementType, H6Props>(
     return (
       <h6
         {...others}
-        className={clsx(CLASSNAME, typographyVariants({ className, variant: 'head-6xl' }))}
+        className={cn(CLASSNAME, typographyVariants({ className, variant: 'head-6xl' }))}
         ref={ref}
       >
         {children}

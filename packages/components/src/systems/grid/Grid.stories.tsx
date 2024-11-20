@@ -1,6 +1,6 @@
+import { cn } from '@/lib/utils';
 import { StorybookContent } from '@/stories';
 import { StoryObj } from '@storybook/react';
-import clsx from 'clsx';
 import * as React from 'react';
 
 export default {
@@ -8,16 +8,12 @@ export default {
   title: 'Systems/Grid',
 };
 
-const GridTemplate = () => {
+const GridTemplate = ({ className }: { className?: string }) => {
   function Columns({ columns }: { columns: number }) {
     return Array.from({ length: columns }).map((_, index) => (
       <div
         key={index}
-        className={clsx(
-          'h-16',
-          'bg-primary text-white',
-          'flex items-center justify-center rounded',
-        )}
+        className={cn(className, 'h-16', 'bg-primary', 'flex items-center justify-center rounded')}
       >
         Col {index + 1}
       </div>
@@ -58,7 +54,7 @@ const GridsStories = () => {
   return (
     <StorybookContent className="flex flex-col">
       <StorybookContent.Light className="flex-col" noAlign noGap>
-        <GridTemplate />
+        <GridTemplate className="text-white" />
       </StorybookContent.Light>
       <StorybookContent.Dark className="flex-col" noAlign noGap>
         <GridTemplate />
@@ -75,12 +71,12 @@ const ContainerGridsStories = () => {
   return (
     <StorybookContent className="flex flex-col">
       <StorybookContent.Light className="flex-col" noAlign noGap>
-        <div className={clsx('container')}>
-          <GridTemplate />
+        <div className={cn('container')}>
+          <GridTemplate className="text-white" />
         </div>
       </StorybookContent.Light>
       <StorybookContent.Dark className="flex-col" noAlign noGap>
-        <div className={clsx('container')}>
+        <div className={cn('container')}>
           <GridTemplate />
         </div>
       </StorybookContent.Dark>

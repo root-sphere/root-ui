@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 import * as React from 'react';
 
 type ElementType = HTMLDivElement;
@@ -48,7 +48,7 @@ export const StorybookContentItem = ({
   return (
     <div
       {...others}
-      className={clsx(
+      className={cn(
         className,
         'StorybookContentItem',
         'relative',
@@ -70,7 +70,7 @@ export const StorybookContentItem = ({
 
 export const createStorybookContentItem = (hocProps: ElementProps) => {
   return ({ children, className, ...others }: StorybookContentItemProps) => (
-    <StorybookContentItem {...hocProps} {...others} className={clsx(hocProps.className, className)}>
+    <StorybookContentItem {...hocProps} {...others} className={cn(hocProps.className, className)}>
       {children}
     </StorybookContentItem>
   );

@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 import * as React from 'react';
 
 type ElementType = HTMLDivElement;
@@ -11,7 +11,7 @@ export const StorybookContentRoot = React.forwardRef<
   ElementProps & StorybookContentRootProps
 >(({ children, className, ...others }, ref) => {
   return (
-    <div {...others} className={clsx(className, 'flex w-full h-full min-h-screen')} ref={ref}>
+    <div {...others} className={cn(className, 'flex w-full h-full min-h-screen')} ref={ref}>
       {children}
     </div>
   );

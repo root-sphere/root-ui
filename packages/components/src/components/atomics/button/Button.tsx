@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 import * as React from 'react';
 
 import { ButtonVariants, buttonVariants } from './Button.styles';
@@ -18,7 +18,7 @@ export const Button = React.forwardRef<ElementType, ButtonProps>(
         tabIndex={0}
         {...others}
         className={buttonVariants({
-          className: clsx(CLASSNAME, className),
+          className: cn(CLASSNAME, className),
           intent,
           variant,
         })}
