@@ -60,8 +60,7 @@
   "browserslist": "> 0.25%, not dead",
   "peerDependencies": {
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0",
-    "tailwindcss": ">=3.0.0"
+    "react-dom": ">=18.0.0"
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.23",
@@ -69,19 +68,22 @@
     "@root-sphere/root-ui-tailwind": "workspace:*",
     "clsx": "^1.2.1",
     "framer-motion": "^11.11.11",
-    "tailwind-variants": "^0.2.1"
+    "tailwind-variants": "^0.2.1",
+    "tailwindcss": "3"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
     "@heroicons/react": "2",
-    "styled-components": "^6.1.13",
-    "@storybook/addon-essentials": "8.2.4",
-    "@storybook/addon-interactions": "8.2.4",
-    "@storybook/addon-links": "8.2.4",
-    "@storybook/addon-onboarding": "8.2.4",
-    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
-    "@storybook/blocks": "8.2.4",
-    "@storybook/react": "8.2.4",
-    "@storybook/react-webpack5": "^8.4.1",
-    "@storybook/test": "8.2.4"
+    "@storybook/addon-essentials": "^8.4.4",
+    "@storybook/addon-interactions": "^8.4.4",
+    "@storybook/addon-onboarding": "^8.4.4",
+    "@storybook/blocks": "^8.4.4",
+    "@storybook/react": "^8.4.4",
+    "@storybook/react-vite": "^8.4.4",
+    "@storybook/test": "^8.4.4",
+    "eslint-plugin-storybook": "^0.11.1",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.4.4",
+    "styled-components": "^6.1.13"
   }
 }

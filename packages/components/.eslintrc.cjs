@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@seolhun/eslint-config'],
+  extends: ['@seolhun/eslint-config', 'plugin:storybook/recommended'],
   settings: {
     react: {
       version: 'detect',

@@ -1,8 +1,7 @@
+import { StorybookContent } from '@/stories';
 import { rootIntentColors } from '@root-sphere/root-ui-tailwind';
 import { StoryObj } from '@storybook/react/*';
 import * as React from 'react';
-
-import { StorybookContent } from '~/stories';
 
 import { Button, ButtonProps } from './Button';
 
@@ -19,6 +18,7 @@ export default {
     },
   },
   component: Button,
+  tags: ['autodocs'],
   title: 'Atomic/Button',
 };
 
@@ -26,10 +26,10 @@ const ButtonsStories = ({ children, ...others }: ButtonProps) => {
   return (
     <StorybookContent>
       <StorybookContent.Light className="flex-col">
-        <Button {...others}>{children}</Button>;
+        <Button {...others}>{children}</Button>
       </StorybookContent.Light>
       <StorybookContent.Dark className="flex-col">
-        <Button {...others}>{children}</Button>;
+        <Button {...others}>{children}</Button>
       </StorybookContent.Dark>
     </StorybookContent>
   );

@@ -1,6 +1,4 @@
-import { join, dirname } from 'path';
-import { merge } from 'webpack-merge'
-import webpackDevConfig from './webpack.common'
+import { join, dirname, resolve } from 'path';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -10,26 +8,26 @@ function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, 'package.json')));
 }
 
-/** @type { import('@storybook/react-webpack5').StorybookConfig } */
+/** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
-  stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
-    getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@storybook/addon-onboarding'),
     getAbsolutePath('@storybook/addon-essentials'),
     getAbsolutePath('@chromatic-com/storybook'),
     getAbsolutePath('@storybook/addon-interactions'),
   ],
   framework: {
-    name: getAbsolutePath('@storybook/react-webpack5'),
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
-  /**
-   * @param {import('webpack').Configuration} config
-   */
-  webpackFinal: async (config) => {
-    const nextConfig = merge(config, webpackDevConfig);
-    return nextConfig;
+  async viteFinal(config) {
+    config.resolve = {
+      alias: {
+        '@': resolve(__dirname, '../src'),
+      },
+    };
+    return config;
   },
 };
 export default config;

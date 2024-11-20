@@ -33,3 +33,5 @@ coverage/
 # rollup visualizer
 stats.html
 stats.*.html
+
+*storybook.log

@@ -1,8 +1,7 @@
+import { StorybookContent } from '@/stories';
 import { pipe, keys, toArray } from '@fxts/core';
 import { StoryObj } from '@storybook/react/*';
 import * as React from 'react';
-
-import { StorybookContent } from '~/stories';
 
 import { H1Props } from './H1';
 import { typographyVariants } from './Typography.styles';
@@ -16,6 +15,7 @@ export default {
       options: variantKeys,
     },
   },
+  tags: ['autodocs'],
   title: 'Systems/Typography',
 };
 

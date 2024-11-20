@@ -1,10 +1,10 @@
+import { StorybookContent } from '@/stories';
 import { StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import * as React from 'react';
 
-import { StorybookContent } from '~/stories';
-
 export default {
+  tags: ['autodocs'],
   title: 'Systems/Grid',
 };
 

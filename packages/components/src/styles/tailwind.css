@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-size: 16px;
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-
 :root {
   /* Undefined Variables */
   --text-color: #1b1d1f;
@@ -138,11 +126,22 @@ html {
   --typography-font-weight-semibold: 600;
   --typography-font-weight-bold: 700;
   --typography-letter-spacing-default: 0em;
+}
 
+[data-theme="dark"] {
+  /* Undefined Variables */
+  --text-color: #f0f0f0;
+  --background-color: #1b1d1f;
+}
 
-  .dark {
-    /* Undefined Variables */
-    --text-color: #f0f0f0;
-    --background-color: #1b1d1f;
-  }
+html {
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
