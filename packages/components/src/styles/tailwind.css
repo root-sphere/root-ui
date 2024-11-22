@@ -2,142 +2,201 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Undefined Variables */
-  --text-color: #1b1d1f;
-  --background-color: #f0f0f0;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
 
-  /* Palette Colors */
-  /* Blue */
-  --color-blue-5: #E6F1FE;
-  --color-blue-10: #CCE3FD;
-  --color-blue-20: #99C7FB;
-  --color-blue-30: #66AAF9;
-  --color-blue-40: #338EF7;
-  --color-blue-50: #006FEE;
-  --color-blue-60: #005BC4;
-  --color-blue-70: #004493;
-  --color-blue-80: #002E62;
-  --color-blue-90: #001731;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-  /* Green */
-  --color-green-5: #ECFDF5;
-  --color-green-10: #D1FAE5;
-  --color-green-20: #A7F3D0;
-  --color-green-30: #6EE7B7;
-  --color-green-40: #34D399;
-  --color-green-50: #10B981;
-  --color-green-60: #059669;
-  --color-green-70: #047857;
-  --color-green-80: #065F46;
-  --color-green-90: #022C22;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
 
-  /* Neutrals */
-  --color-neutrals-0: #FFFFFF;
-  --color-neutrals-1: #F7F7F7;
-  --color-neutrals-5: #DCDCDC;
-  --color-neutrals-10: #C4C4C4;
-  --color-neutrals-20: #B0B0B0;
-  --color-neutrals-30: #9B9B9B;
-  --color-neutrals-40: #8A8A8A;
-  --color-neutrals-50: #737373;
-  --color-neutrals-60: #5C5C5C;
-  --color-neutrals-70: #474747;
-  --color-neutrals-80: #2A2A2A;
-  --color-neutrals-90: #171717;
-  --color-neutrals-95: #0F0F0F;
-  --color-neutrals-100: #000000;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
 
-  /* Orange */
-  --color-orange-5: #FFFBEB;
-  --color-orange-10: #FEF3C7;
-  --color-orange-20: #FDE68A;
-  --color-orange-30: #FCD34D;
-  --color-orange-40: #FBBF24;
-  --color-orange-50: #F59E0B;
-  --color-orange-60: #D97706;
-  --color-orange-70: #B45309;
-  --color-orange-80: #92400E;
-  --color-orange-90: #78350F;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
 
-  /* Red */
-  --color-red-5: #FEF2F2;
-  --color-red-10: #FEE2E2;
-  --color-red-20: #FECACA;
-  --color-red-30: #FCA5A5;
-  --color-red-40: #F87171;
-  --color-red-50: #EF4444;
-  --color-red-60: #DC2626;
-  --color-red-70: #B91C1C;
-  --color-red-80: #991B1B;
-  --color-red-90: #7F1D1D;
+    --ring: 215 20.2% 65.1%;
+    --radius: 0.5rem;
 
-  /* System Colors (Direct Assignment) */
-  --color-primary: var(--color-blue-50);
-  --color-background-light: var(--color-neutrals-0);
-  --color-border: var(--color-neutrals-5);
-  --color-error: var(--color-red-50);
-  --color-status-warning: var(--color-orange-50);
-  --color-status-danger: var(--color-red-50);
-  --color-status-success: var(--color-green-50);
-  --color-surface-bright: var(--color-neutrals-0);
-  --color-surface-dim: var(--color-neutrals-5);
-  --color-surface-normal: var(--color-neutrals-1);
-  --color-text-primary: var(--color-neutrals-100);
-  --color-text-secondary: var(--color-neutrals-50);
-  --color-text-tertiary: var(--color-neutrals-20);
-  --color-text-placeholder: var(--color-neutrals-10);
-  --color-text-hashtag: var(--color-blue-50);
+    /* Colors */
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 39%;
+    --success-foreground: 210 40% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 89%;
 
-  /* Font Size Variables */
-  --typography-font-size-heading-1: 3rem;
-  --typography-font-size-heading-2: 2.5rem;
-  --typography-font-size-heading-3: 2.25rem;
-  --typography-font-size-heading-4: 2rem;
-  --typography-font-size-heading-5: 1.75rem;
-  --typography-font-size-heading-6: 1.5rem;
-  --typography-font-size-title-3: 1.25rem;
-  --typography-font-size-title-2: 1.125rem;
-  --typography-font-size-title-1: 1rem;
-  --typography-font-size-body-2: 1rem;
-  --typography-font-size-body-1: 0.875rem;
-  --typography-font-size-label: 0.875rem;
-  --typography-font-size-tooltip: 0.875rem;
-  --typography-font-size-caption: 0.75rem;
+    /* RootUI Foundations */
+    /* Blue */
+    --color-blue-5: 213 93% 95%;
+    --color-blue-10: 213 93% 90%;
+    --color-blue-20: 213 93% 79%;
+    --color-blue-30: 213 93% 69%;
+    --color-blue-40: 213 93% 58%;
+    --color-blue-50: 213 100% 47%;
+    --color-blue-60: 213 100% 38%;
+    --color-blue-70: 213 100% 29%;
+    --color-blue-80: 213 100% 19%;
+    --color-blue-90: 213 100% 10%;
 
-  /* Line Height Variables */
-  --typography-line-height-heading-1: 3.625rem;
-  --typography-line-height-heading-2: 3rem;
-  --typography-line-height-heading-3: 2.875rem;
-  --typography-line-height-heading-4: 2.5rem;
-  --typography-line-height-heading-5: 2.25rem;
-  --typography-line-height-heading-6: 2.125rem;
-  --typography-line-height-title-3: 1.875rem;
-  --typography-line-height-title-2: 1.75rem;
-  --typography-line-height-title-1: 1.625rem;
-  --typography-line-height-body-2: 1.625rem;
-  --typography-line-height-body-1: 1.5rem;
-  --typography-line-height-label: 1.5rem;
-  --typography-line-height-tooltip: 1.5rem;
-  --typography-line-height-caption: 1.125rem;
+    /* Green */
+    --color-green-5: 152 75% 96%;
+    --color-green-10: 152 75% 90%;
+    --color-green-20: 152 75% 80%;
+    --color-green-30: 152 75% 67%;
+    --color-green-40: 152 75% 52%;
+    --color-green-50: 152 75% 40%;
+    --color-green-60: 152 75% 30%;
+    --color-green-70: 152 75% 24%;
+    --color-green-80: 152 75% 19%;
+    --color-green-90: 152 75% 9%;
 
-  /* Font Weight Variables */
-  --typography-font-weight-medium: 500;
-  --typography-font-weight-semibold: 600;
-  --typography-font-weight-bold: 700;
-  --typography-letter-spacing-default: 0em;
-}
+    /* Neutrals */
+    --color-neutrals-0: 0 0% 100%;
+    --color-neutrals-1: 0 0% 97%;
+    --color-neutrals-5: 0 0% 86%;
+    --color-neutrals-10: 0 0% 77%;
+    --color-neutrals-20: 0 0% 69%;
+    --color-neutrals-30: 0 0% 61%;
+    --color-neutrals-40: 0 0% 54%;
+    --color-neutrals-50: 0 0% 45%;
+    --color-neutrals-60: 0 0% 36%;
+    --color-neutrals-70: 0 0% 28%;
+    --color-neutrals-80: 0 0% 16%;
+    --color-neutrals-90: 0 0% 9%;
+    --color-neutrals-95: 0 0% 6%;
+    --color-neutrals-100: 0 0% 0%;
 
-[data-theme="dark"] {
-  /* Undefined Variables */
-  --text-color: #f0f0f0;
-  --background-color: #1b1d1f;
+    /* Orange */
+    --color-orange-5: 48 100% 96%;
+    --color-orange-10: 48 96% 89%;
+    --color-orange-20: 48 96% 77%;
+    --color-orange-30: 48 96% 62%;
+    --color-orange-40: 48 96% 53%;
+    --color-orange-50: 35 92% 50%;
+    --color-orange-60: 28 92% 42%;
+    --color-orange-70: 22 92% 37%;
+    --color-orange-80: 21 92% 31%;
+    --color-orange-90: 24 92% 26%;
+
+    /* Red */
+    --color-red-5: 0 86% 97%;
+    --color-red-10: 0 86% 94%;
+    --color-red-20: 0 86% 89%;
+    --color-red-30: 0 86% 82%;
+    --color-red-40: 0 86% 71%;
+    --color-red-50: 0 84% 60%;
+    --color-red-60: 0 84% 51%;
+    --color-red-70: 0 84% 42%;
+    --color-red-80: 0 84% 35%;
+    --color-red-90: 0 84% 31%;
+
+    /* System Colors (Direct Assignment) */
+    --color-primary: var(--color-blue-50);
+    --color-background-light: var(--color-neutrals-0);
+    --color-border: var(--color-neutrals-5);
+    --color-error: var(--color-red-50);
+    --color-warning: var(--color-orange-50);
+    --color-danger: var(--color-red-50);
+    --color-success: var(--color-green-50);
+    --color-surface-bright: var(--color-neutrals-0);
+    --color-surface-dim: var(--color-neutrals-5);
+    --color-surface-normal: var(--color-neutrals-1);
+    --color-text-primary: var(--color-neutrals-100);
+    --color-text-secondary: var(--color-neutrals-50);
+    --color-text-tertiary: var(--color-neutrals-20);
+    --color-text-placeholder: var(--color-neutrals-10);
+    --color-text-hashtag: var(--color-blue-50);
+
+    /* Font Size Variables */
+    --typography-font-size-heading-1: 3rem;
+    --typography-font-size-heading-2: 2.5rem;
+    --typography-font-size-heading-3: 2.25rem;
+    --typography-font-size-heading-4: 2rem;
+    --typography-font-size-heading-5: 1.75rem;
+    --typography-font-size-heading-6: 1.5rem;
+    --typography-font-size-title-3: 1.25rem;
+    --typography-font-size-title-2: 1.125rem;
+    --typography-font-size-title-1: 1rem;
+    --typography-font-size-body-2: 1rem;
+    --typography-font-size-body-1: 0.875rem;
+    --typography-font-size-label: 0.875rem;
+    --typography-font-size-tooltip: 0.875rem;
+    --typography-font-size-caption: 0.75rem;
+
+    /* Line Height Variables */
+    --typography-line-height-heading-1: 3.625rem;
+    --typography-line-height-heading-2: 3rem;
+    --typography-line-height-heading-3: 2.875rem;
+    --typography-line-height-heading-4: 2.5rem;
+    --typography-line-height-heading-5: 2.25rem;
+    --typography-line-height-heading-6: 2.125rem;
+    --typography-line-height-title-3: 1.875rem;
+    --typography-line-height-title-2: 1.75rem;
+    --typography-line-height-title-1: 1.625rem;
+    --typography-line-height-body-2: 1.625rem;
+    --typography-line-height-body-1: 1.5rem;
+    --typography-line-height-label: 1.5rem;
+    --typography-line-height-tooltip: 1.5rem;
+    --typography-line-height-caption: 1.125rem;
+
+    /* Font Weight Variables */
+    --typography-font-weight-medium: 500;
+    --typography-font-weight-semibold: 600;
+    --typography-font-weight-bold: 700;
+    --typography-letter-spacing-default: 0em;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --ring: 216 34% 17%;
+    --radius: 0.5rem;
+
+    /* Colors */
+    --primary: 240 5% 11.2%;
+    --primary-foreground: 210 40% 95%;
+    --secondary: 222.2 47.4% 12%;
+    --secondary-foreground: 210 40% 94%;
+    --accent: 210 40% 92.1%;
+    --accent-foreground: 222.2 47.4% 10.2%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 39%;
+    --success-foreground: 210 40% 98%;
+    --warning: 48 96% 89%;
+    --warning-foreground: 38 92% 50%;
+  }
 }
 
 html {
   font-size: 16px;
   color: var(--text-color);
   background-color: var(--background-color);
+  font-family: 'Pretendard', sans-serif;
 }
 
 *,
