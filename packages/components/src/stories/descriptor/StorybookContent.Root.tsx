@@ -11,8 +11,8 @@ export const StorybookContentRoot = React.forwardRef<
   ElementProps & StorybookContentRootProps
 >(({ children, className, ...others }, ref) => {
   return (
-    <div {...others} className={cn(className, 'flex w-full h-full min-h-screen')} ref={ref}>
-      {children}
+    <div {...others} className={cn(className, 'w-screen h-full min-h-screen')} ref={ref}>
+      <div className="container">{children}</div>
     </div>
   );
 });

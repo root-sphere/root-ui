@@ -1,24 +1,20 @@
 import { cn } from '@/lib/utils';
 import * as React from 'react';
 
-import { typographyVariants } from './Typography.styles';
+import { typographyVariants, type TypographyVariants } from './heading.styles';
 
-const CLASSNAME = 'Root__H3';
 type ElementType = HTMLHeadingElement;
 type ElementProps = React.HTMLAttributes<ElementType>;
 
-export interface H3Props extends ElementProps {}
+export interface H3Props extends ElementProps, TypographyVariants {}
 
 export const H3 = React.forwardRef<ElementType, H3Props>(
-  ({ children, className, ...others }, ref) => {
+  ({ children, className, variant = 'head-3xl', ...props }, ref) => {
     return (
-      <h3
-        {...others}
-        className={cn(CLASSNAME, typographyVariants({ className, variant: 'head-3xl' }))}
-        ref={ref}
-      >
+      <h3 ref={ref} className={cn(typographyVariants({ className, variant }))} {...props}>
         {children}
       </h3>
     );
   },
 );
+H3.displayName = 'H3';

@@ -4,7 +4,6 @@ import { StoryObj } from '@storybook/react';
 import * as React from 'react';
 
 export default {
-  tags: ['autodocs'],
   title: 'Systems/Grid',
 };
 
@@ -53,12 +52,7 @@ const GridTemplate = ({ className }: { className?: string }) => {
 const GridsStories = () => {
   return (
     <StorybookContent className="flex flex-col">
-      <StorybookContent.Light className="flex-col" noAlign noGap>
-        <GridTemplate className="text-white" />
-      </StorybookContent.Light>
-      <StorybookContent.Dark className="flex-col" noAlign noGap>
-        <GridTemplate />
-      </StorybookContent.Dark>
+      <GridTemplate className="text-white" />
     </StorybookContent>
   );
 };
@@ -70,16 +64,7 @@ export const Grids: StoryObj = {
 const ContainerGridsStories = () => {
   return (
     <StorybookContent className="flex flex-col">
-      <StorybookContent.Light className="flex-col" noAlign noGap>
-        <div className={cn('container')}>
-          <GridTemplate className="text-white" />
-        </div>
-      </StorybookContent.Light>
-      <StorybookContent.Dark className="flex-col" noAlign noGap>
-        <div className={cn('container')}>
-          <GridTemplate />
-        </div>
-      </StorybookContent.Dark>
+      <GridTemplate className="text-white" />
     </StorybookContent>
   );
 };

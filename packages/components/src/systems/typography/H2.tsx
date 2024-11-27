@@ -1,24 +1,20 @@
 import { cn } from '@/lib/utils';
 import * as React from 'react';
 
-import { typographyVariants } from './Typography.styles';
+import { typographyVariants, type TypographyVariants } from './heading.styles';
 
-const CLASSNAME = 'Root__H2';
 type ElementType = HTMLHeadingElement;
 type ElementProps = React.HTMLAttributes<ElementType>;
 
-export interface H2Props extends ElementProps {}
+export interface H2Props extends ElementProps, TypographyVariants {}
 
 export const H2 = React.forwardRef<ElementType, H2Props>(
-  ({ children, className, ...others }, ref) => {
+  ({ children, className, variant = 'head-2xl', ...props }, ref) => {
     return (
-      <h2
-        {...others}
-        className={cn(CLASSNAME, typographyVariants({ className, variant: 'head-2xl' }))}
-        ref={ref}
-      >
+      <h2 ref={ref} className={cn(typographyVariants({ className, variant }))} {...props}>
         {children}
       </h2>
     );
   },
 );
+H2.displayName = 'H2';

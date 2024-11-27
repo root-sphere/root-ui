@@ -5,7 +5,7 @@ import { StoryObj } from '@storybook/react/*';
 import * as React from 'react';
 
 import { H1Props } from './H1';
-import { typographyVariants } from './Typography.styles';
+import { typographyVariants } from './heading.styles';
 
 const variantKeys = pipe(typographyVariants.variants.variant, keys, toArray);
 
@@ -16,7 +16,6 @@ export default {
       options: variantKeys,
     },
   },
-  tags: ['autodocs'],
   title: 'Systems/Typography',
 };
 
@@ -41,12 +40,7 @@ const CombinedTypographyTemplate = ({ className }: { className?: string }) => (
 
 const TypographyStories = ({ children, className, ...others }: H1Props) => (
   <StorybookContent>
-    <StorybookContent.Light>
-      <CombinedTypographyTemplate {...others} />
-    </StorybookContent.Light>
-    <StorybookContent.Dark>
-      <CombinedTypographyTemplate {...others} className={cn(className, 'text-white')} />
-    </StorybookContent.Dark>
+    <CombinedTypographyTemplate {...others} />
   </StorybookContent>
 );
 

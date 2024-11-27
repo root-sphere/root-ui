@@ -1,12 +1,16 @@
 name: Storybook Build & Deployment at Github Page
 
-on: workflow_dispatch
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**/*.md'
 
 jobs:
   storybook-ci-cd:
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.ROOT_SPHERE_GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
       PUBLIC_NPM_TOKEN: ${{secrets.PUBLIC_NPM_TOKEN}}
 
     steps:
@@ -30,7 +34,5 @@ jobs:
       - name: Deploy Storybook
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          branch: storybook
           folder: ./packages/components/docs
-        env:
-          GITHUB_TOKEN: ${{ secrets.ROOT_SPHERE_GITHUB_TOKEN }}
-          PUBLIC_NPM_TOKEN: ${{secrets.PUBLIC_NPM_TOKEN}}
