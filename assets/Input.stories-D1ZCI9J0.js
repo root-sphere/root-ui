@@ -1,0 +1,3 @@
+import{S as m}from"./StorybookContent-DvGPSzL3.js";import{r}from"./index-DRjF_FHU.js";import{I as n}from"./input-BT7Yxsui.js";import"./utils-CmPBaH-W.js";import"./index-C9mr3DAw.js";const S={component:n,title:"Components/Input"},c=({children:p,...a})=>r.createElement(m,null,r.createElement(n,{...a},p)),t={render:c};var e,o,s;t.parameters={...t.parameters,docs:{...(e=t.parameters)==null?void 0:e.docs,source:{originalSource:`{
+  render: InputsStories
+}`,...(s=(o=t.parameters)==null?void 0:o.docs)==null?void 0:s.source}}};const f=["Inputs"];export{t as Inputs,f as __namedExportsOrder,S as default};
