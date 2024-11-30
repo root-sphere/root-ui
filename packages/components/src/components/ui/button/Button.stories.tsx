@@ -23,7 +23,16 @@ const meta = {
     intent: {
       control: 'select',
       description: 'The intent/purpose of the button which determines its color scheme',
-      options: ['primary', 'secondary', 'tertiary', 'success', 'warning', 'danger', 'info'],
+      options: [
+        'default',
+        'primary',
+        'secondary',
+        'tertiary',
+        'success',
+        'warning',
+        'danger',
+        'info',
+      ],
     },
     size: {
       control: 'select',
@@ -46,15 +55,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Playground: Story = {
-  args: {
-    children: 'Button',
-    intent: 'primary',
-    size: 'default',
-    variant: 'solid',
-  },
-};
-
 export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-col gap-8">
@@ -63,6 +63,22 @@ export const AllVariants: Story = {
         <h3 className="text-lg font-semibold">Brand Colors</h3>
 
         <div className="flex flex-col gap-4">
+          {/* Default */}
+          <div className="flex gap-4">
+            <Button intent="default" variant="solid">
+              Default Solid
+            </Button>
+            <Button intent="default" variant="outline">
+              Default Outline
+            </Button>
+            <Button intent="default" variant="ghost">
+              Default Ghost
+            </Button>
+            <Button intent="default" variant="link">
+              Default Link
+            </Button>
+          </div>
+
           {/* Primary */}
           <div className="flex gap-4">
             <Button intent="primary" variant="solid">
@@ -220,7 +236,23 @@ export const AllVariants: Story = {
   ),
 };
 
+export const Playground: Story = {
+  args: {
+    children: 'Button',
+    intent: 'primary',
+    size: 'default',
+    variant: 'solid',
+  },
+};
+
 // Individual stories for each intent
+export const Default: Story = {
+  args: {
+    children: 'Default Button',
+    intent: 'default',
+  },
+};
+
 export const Primary: Story = {
   args: {
     children: 'Primary Button',

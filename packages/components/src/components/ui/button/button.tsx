@@ -14,7 +14,7 @@ export const buttonVariants = tv({
     '[&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   ],
   defaultVariants: {
-    intent: 'primary',
+    intent: 'default',
     size: 'default',
     variant: 'outline',
   },
@@ -73,6 +73,15 @@ export const buttonVariants = tv({
         'data-[variant=ghost]:text-status-cautionary hover:bg-status-cautionary/10',
         'data-[variant=link]:text-status-cautionary',
         'focus-visible:ring-status-cautionary',
+      ],
+      default: [
+        'data-[variant=outline]:border-input data-[variant=outline]:text-foreground',
+        'data-[variant=outline]:hover:bg-muted/10 data-[variant=outline]:hover:border-ring',
+        'data-[variant=solid]:border-input data-[variant=solid]:bg-foreground data-[variant=solid]:text-background',
+        'data-[variant=solid]:hover:bg-foreground/90',
+        'data-[variant=ghost]:text-foreground hover:bg-muted/10',
+        'data-[variant=link]:text-foreground',
+        'focus-visible:ring-ring',
       ],
       tertiary: [
         'data-[variant=outline]:border-brand-tertiary data-[variant=outline]:text-brand-tertiary',

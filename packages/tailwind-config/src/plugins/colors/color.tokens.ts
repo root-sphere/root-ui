@@ -46,6 +46,7 @@ export const rootPaletteColors = {
   'daybreak-700': 'hsl(var(--color-daybreak-700))',
   'daybreak-800': 'hsl(var(--color-daybreak-800))',
   'daybreak-900': 'hsl(var(--color-daybreak-900))',
+
   // Dust Red
   'dustred-10': 'hsl(var(--color-dustred-10))',
   'dustred-50': 'hsl(var(--color-dustred-50))',

@@ -56,11 +56,9 @@
     --typography-letter-spacing-default: 0em;
 
     /* Colors */
-    --primary-rgb: 0, 102, 255;  /* Default blue (#0066FF) */
-    --primary: var(--primary-rgb);  /* For backward compatibility */
+    --primary: var(--primary);  /* For backward compatibility */
     --primary-foreground: 210 40% 98%;
-    --secondary-rgb: 110, 86, 207;  /* Default purple (#6E56CF) */
-    --secondary: var(--secondary-rgb);  /* For backward compatibility */
+    --secondary: var(--secondary);  /* For backward compatibility */
     --secondary-foreground: 222.2 47.4% 11.2%;
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
@@ -87,7 +85,6 @@
     --color-text-tertiary: var(--color-neutrals-20);
     --color-text-placeholder: var(--color-neutrals-10);
     --color-text-hashtag: var(--color-blue-50);
-
 
     /* Cool Neutral Colors */
     --color-cool-neutral-0: 0 0% 100%;    /* #FFFFFF */
