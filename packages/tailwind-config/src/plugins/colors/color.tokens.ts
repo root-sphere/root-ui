@@ -115,18 +115,6 @@ export const rootPaletteColors = {
   'neutrals-95': 'hsl(var(--color-neutrals-95))',
   'neutrals-100': 'hsl(var(--color-neutrals-100))',
 
-  // Orange
-  'orange-5': 'hsl(var(--color-orange-5))',
-  'orange-10': 'hsl(var(--color-orange-10))',
-  'orange-20': 'hsl(var(--color-orange-20))',
-  'orange-30': 'hsl(var(--color-orange-30))',
-  'orange-40': 'hsl(var(--color-orange-40))',
-  'orange-50': 'hsl(var(--color-orange-50))',
-  'orange-60': 'hsl(var(--color-orange-60))',
-  'orange-70': 'hsl(var(--color-orange-70))',
-  'orange-80': 'hsl(var(--color-orange-80))',
-  'orange-90': 'hsl(var(--color-orange-90))',
-
   // Polar
   'polar-10': 'hsl(var(--color-polar-10))',
   'polar-50': 'hsl(var(--color-polar-50))',

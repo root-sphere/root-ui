@@ -4,6 +4,10 @@
 
 @layer base {
   :root {
+    /* * * * * * * * * * *
+    * Shadcn Start
+    * * * * * * * * * * */
+    /* System Colors */
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
@@ -16,6 +20,74 @@
     --card-foreground: 222.2 47.4% 11.2%;
     --ring: 215 20.2% 65.1%;
     --radius: 0.5rem;
+
+    /* Shadcn Colors */
+    --primary: var(--primary);  /* For backward compatibility */
+    --primary-foreground: 210 40% 98%;
+    --secondary: var(--secondary);  /* For backward compatibility */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 39%;
+    --success-foreground: 210 40% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 89%;
+    /* * * * * * * * * * *
+    * Shadcn End
+    * * * * * * * * * * */
+
+    /* * * * * * * * * * *
+    * Root-UI Colors Start
+    * * * * * * * * * * */
+    /* Brand Colors */
+    --color-brand-primary: 142 90% 40%;    /* #0AC262 */
+    --color-brand-secondary: 230 75% 44%;  /* #1D39C4 */
+    --color-brand-tertiary: 52 96% 53%;    /* #FADB14 */
+
+    /* Status Colors */
+    --color-status-informative: 217 91% 60%; /* #1677FF */
+    --color-status-negative: 0 80% 63%;      /* #F5222D */
+    --color-status-positive: 142 90% 40%;    /* #0AC262 */
+    --color-status-cautionary: 28 96% 53%;   /* #FA8C16 */
+
+    /* Background Colors */
+    --color-background-normal: 0 0% 100%;    /* #FFFFFF */
+    --color-background-alternative: 0 0% 97%; /* #F7F7F7 */
+
+    /* Line Colors */
+    --color-line-normal: 0 0% 90%;          /* #E6E6E6 */
+    --color-line-accent: 0 0% 84%;          /* #D5D5D5 */
+    --color-line-divider: 0 0% 69%;         /* #B0B0B0 */
+
+    /* Inverse Colors */
+    --color-inverse-primary: 142 90% 40%;   /* #0AC262 */
+    --color-inverse-static: 0 0% 0%;        /* #000000 */
+
+    /* Common Colors */
+    --color-common-white: 0 0% 100%;    /* #FFFFFF */
+    --color-common-black: 0 0% 0%;      /* #000000 */
+
+    /* System Colors (Direct Assignment) */
+    --color-primary: var(--color-blue-50);
+    --color-background-light: var(--color-neutrals-0);
+    --color-border: var(--color-neutrals-5);
+    --color-error: var(--color-red-50);
+    --color-warning: var(--color-orange-50);
+    --color-danger: var(--color-red-50);
+    --color-success: var(--color-green-50);
+    --color-surface-bright: var(--color-neutrals-0);
+    --color-surface-dim: var(--color-neutrals-5);
+    --color-surface-normal: var(--color-neutrals-1);
+    --color-text-primary: var(--color-neutrals-100);
+    --color-text-secondary: var(--color-neutrals-50);
+    --color-text-tertiary: var(--color-neutrals-20);
+    --color-text-placeholder: var(--color-neutrals-10);
+    --color-text-hashtag: var(--color-blue-50);
+    /* * * * * * * * * * *
+    * Root-UI Colors End
+    * * * * * * * * * * */
 
     /* Font Size Variables */
     --typography-font-size-heading-1: 3rem;
@@ -55,38 +127,10 @@
     --typography-font-weight-bold: 700;
     --typography-letter-spacing-default: 0em;
 
-    /* Colors */
-    --primary: var(--primary);  /* For backward compatibility */
-    --primary-foreground: 210 40% 98%;
-    --secondary: var(--secondary);  /* For backward compatibility */
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
-    --success: 142 76% 39%;
-    --success-foreground: 210 40% 98%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 48 96% 89%;
-
-    /* System Colors (Direct Assignment) */
-    --color-primary: var(--color-blue-50);
-    --color-background-light: var(--color-neutrals-0);
-    --color-border: var(--color-neutrals-5);
-    --color-error: var(--color-red-50);
-    --color-warning: var(--color-orange-50);
-    --color-danger: var(--color-red-50);
-    --color-success: var(--color-green-50);
-    --color-surface-bright: var(--color-neutrals-0);
-    --color-surface-dim: var(--color-neutrals-5);
-    --color-surface-normal: var(--color-neutrals-1);
-    --color-text-primary: var(--color-neutrals-100);
-    --color-text-secondary: var(--color-neutrals-50);
-    --color-text-tertiary: var(--color-neutrals-20);
-    --color-text-placeholder: var(--color-neutrals-10);
-    --color-text-hashtag: var(--color-blue-50);
-
-    /* Cool Neutral Colors */
+    /* * * * * * * * * * *
+    * Palette Colors Start
+    * * * * * * * * * * */
+    /* Cool Neutral Colors  */
     --color-cool-neutral-0: 0 0% 100%;    /* #FFFFFF */
     --color-cool-neutral-50: 240 17% 98%;  /* #F7F7FB */
     --color-cool-neutral-100: 216 12% 82%; /* #CCD1D6 */
@@ -97,34 +141,6 @@
     --color-cool-neutral-600: 180 2% 28%;  /* #454849 */
     --color-cool-neutral-700: 200 3% 17%;  /* #292A2B */
     --color-cool-neutral-800: 0 0% 11%;    /* #1B1B1B */
-
-    /* Brand Colors */
-    --color-brand-primary: 142 90% 40%;    /* #0AC262 */
-    --color-brand-secondary: 230 75% 44%;  /* #1D39C4 */
-    --color-brand-tertiary: 52 96% 53%;    /* #FADB14 */
-
-    /* Status Colors */
-    --color-status-informative: 217 91% 60%; /* #1677FF */
-    --color-status-negative: 0 80% 63%;      /* #F5222D */
-    --color-status-positive: 142 90% 40%;    /* #0AC262 */
-    --color-status-cautionary: 28 96% 53%;   /* #FA8C16 */
-
-    /* Background Colors */
-    --color-background-normal: 0 0% 100%;    /* #FFFFFF */
-    --color-background-alternative: 0 0% 97%; /* #F7F7F7 */
-
-    /* Line Colors */
-    --color-line-normal: 0 0% 90%;          /* #E6E6E6 */
-    --color-line-accent: 0 0% 84%;          /* #D5D5D5 */
-    --color-line-divider: 0 0% 69%;         /* #B0B0B0 */
-
-    /* Inverse Colors */
-    --color-inverse-primary: 142 90% 40%;   /* #0AC262 */
-    --color-inverse-static: 0 0% 0%;        /* #000000 */
-
-    /* Common Colors */
-    --color-common-white: 0 0% 100%;    /* #FFFFFF */
-    --color-common-black: 0 0% 0%;      /* #000000 */
 
     /* Daybreak Blue */
     --color-daybreak-10: 204 100% 98%;   /* #F5FBFF */
@@ -268,6 +284,9 @@
     --color-magenta-700: 340 82% 34%;         /* #9E1068 */
     --color-magenta-800: 340 87% 24%;         /* #780650 */
     --color-magenta-900: 340 82% 17%;         /* #520339 */
+    /* * * * * * * * * * * *
+    * Palette Colors End
+    * * * * * * * * * * * */
   }
 }
 
