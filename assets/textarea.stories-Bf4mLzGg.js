@@ -1,3 +1,0 @@
-import{S as m}from"./StorybookContent-DvGPSzL3.js";import{r}from"./index-DRjF_FHU.js";import{T as t}from"./textarea-DAovJRse.js";import"./utils-CmPBaH-W.js";import"./index-C9mr3DAw.js";const x={component:t,title:"Components/Textarea"},n=()=>r.createElement(m,{className:"flex-col gap-4"},r.createElement(t,{placeholder:"Type your message here."}),r.createElement(t,{placeholder:"Disabled textarea",disabled:!0})),e={render:n};var a,o,s;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
-  render: TextareaStories
-}`,...(s=(o=e.parameters)==null?void 0:o.docs)==null?void 0:s.source}}};const u=["Default"];export{e as Default,u as __namedExportsOrder,x as default};
