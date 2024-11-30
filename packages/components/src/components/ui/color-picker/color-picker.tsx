@@ -153,7 +153,6 @@ export function ColorPicker({
 
         <Input
           intent={intent}
-          variant={variant}
           value={background}
           className="col-span-2 h-8"
           onChange={(e) => setBackground(e.currentTarget.value)}
