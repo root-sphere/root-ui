@@ -12,8 +12,6 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
-    layout: 'centered',
-    // tags: ['autodocs'],
     docs: {
       page: () => (
         <>
