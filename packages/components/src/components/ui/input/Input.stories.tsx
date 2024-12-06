@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { Input } from './input';
 
-const meta = {
+const meta: Meta<typeof Input> = {
   args: {
     disabled: false,
     placeholder: 'Enter text...',
