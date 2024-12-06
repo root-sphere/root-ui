@@ -45,32 +45,67 @@ const colorPickerVariants = tv({
   },
   variants: {
     intent: {
-      danger: {
+      accent: {
+        trigger: [
+          'border-accent text-accent',
+          'focus-visible:border-accent focus-visible:ring-accent',
+          'hover:border-accent hover:bg-accent/10',
+        ],
+      },
+      primary: {
+        trigger: [
+          'border-primary text-primary',
+          'focus-visible:border-primary focus-visible:ring-primary',
+          'hover:border-primary hover:bg-primary/10',
+        ],
+      },
+      secondary: {
+        trigger: [
+          'border-secondary text-secondary',
+          'focus-visible:border-secondary focus-visible:ring-secondary',
+          'hover:border-secondary hover:bg-secondary/10',
+        ],
+      },
+      tertiary: {
+        trigger: [
+          'border-tertiary text-tertiary',
+          'focus-visible:border-tertiary focus-visible:ring-tertiary',
+          'hover:border-tertiary hover:bg-tertiary/10',
+        ],
+      },
+      informative: {
+        trigger: [
+          'border-informative text-informative',
+          'focus-visible:border-informative focus-visible:ring-informative',
+          'hover:border-informative hover:bg-informative/10',
+        ],
+      },
+      positive: {
+        trigger: [
+          'border-positive text-positive',
+          'focus-visible:border-positive focus-visible:ring-positive',
+          'hover:border-positive hover:bg-positive/10',
+        ],
+      },
+      cautionary: {
+        trigger: [
+          'border-cautionary text-cautionary',
+          'focus-visible:border-cautionary focus-visible:ring-cautionary',
+          'hover:border-cautionary hover:bg-cautionary/10',
+        ],
+      },
+      destructive: {
         trigger: [
           'border-destructive text-destructive',
           'focus-visible:border-destructive focus-visible:ring-destructive',
           'hover:border-destructive hover:bg-destructive/10',
         ],
       },
-      primary: {
+      negative: {
         trigger: [
-          'border-input text-foreground',
-          'focus-visible:border-primary focus-visible:ring-primary',
-          'hover:border-primary hover:bg-primary/10',
-        ],
-      },
-      success: {
-        trigger: [
-          'border-success text-success',
-          'focus-visible:border-success focus-visible:ring-success',
-          'hover:border-success hover:bg-success/10',
-        ],
-      },
-      warning: {
-        trigger: [
-          'border-warning text-warning',
-          'focus-visible:border-warning focus-visible:ring-warning',
-          'hover:border-warning hover:bg-warning/10',
+          'border-negative text-negative',
+          'focus-visible:border-negative focus-visible:ring-negative',
+          'hover:border-negative hover:bg-negative/10',
         ],
       },
     },
@@ -152,7 +187,6 @@ export function ColorPicker({
         </div>
 
         <Input
-          intent={intent}
           value={background}
           className="col-span-2 h-8"
           onChange={(e) => setBackground(e.currentTarget.value)}
