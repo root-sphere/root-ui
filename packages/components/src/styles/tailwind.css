@@ -9,31 +9,46 @@
     * * * * * * * * * * */
     /* System Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
-    --ring: 215 20.2% 65.1%;
+    --foreground: 240 10% 5%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --muted: 240 5% 95%;
+    --muted-foreground: 240 3.8% 30%;
+    --ring: 240 5% 65%;
     --radius: 0.5rem;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 5%;
 
     /* Shadcn Colors */
-    --primary: var(--primary);  /* For backward compatibility */
+    --accent: 240 5.9% 20%;
+    --accent-foreground: 1 1% 98%;
+
+    --primary: 142 90% 40%;
     --primary-foreground: 210 40% 98%;
-    --secondary: var(--secondary);  /* For backward compatibility */
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 230 75% 44%;
+    --secondary-foreground: 220 50% 98%;
+
+    --tertiary: 52 96% 53%;
+    --tertiary-foreground: 220 50% 98%;
+
+    --informative: 217 91% 60%;
+    --informative-foreground: 210 40% 98%;
+
+    --positive: 142 76% 39%;
+    --positive-foreground: 210 40% 98%;
+
+    --cautionary: 28 96% 53%;
+    --cautionary-foreground: 210 40% 98%;
+
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
-    --success: 142 76% 39%;
-    --success-foreground: 210 40% 98%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 48 96% 89%;
+
+    --negative: 0 80% 63%;
+    --negative-foreground: 210 40% 98%;
+
     /* * * * * * * * * * *
     * Shadcn End
     * * * * * * * * * * */
@@ -41,17 +56,6 @@
     /* * * * * * * * * * *
     * Root-UI Colors Start
     * * * * * * * * * * */
-    /* Brand Colors */
-    --color-brand-primary: 142 90% 40%;    /* #0AC262 */
-    --color-brand-secondary: 230 75% 44%;  /* #1D39C4 */
-    --color-brand-tertiary: 52 96% 53%;    /* #FADB14 */
-
-    /* Status Colors */
-    --color-status-informative: 217 91% 60%; /* #1677FF */
-    --color-status-negative: 0 80% 63%;      /* #F5222D */
-    --color-status-positive: 142 90% 40%;    /* #0AC262 */
-    --color-status-cautionary: 28 96% 53%;   /* #FA8C16 */
-
     /* Background Colors */
     --color-background-normal: 0 0% 100%;    /* #FFFFFF */
     --color-background-alternative: 0 0% 97%; /* #F7F7F7 */

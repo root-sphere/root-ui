@@ -20,15 +20,17 @@ root-ui managed by TailwindCSS. You can customize the theme by modifying the `ta
 
 We manage below intent colors.
 
-- cream
-- space
-- neutral
-- primary
-- info
-- success
-- warning
-- danger
+- default
+- muted
 - accent
+- primary
+- secondary
+- tertiary
+- informative
+- positive
+- cautionary
+- destructive
+- negative
 
 All colors have 0-10 shades and default color(4 shade) is the main color.
 

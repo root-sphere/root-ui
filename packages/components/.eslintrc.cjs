@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@seolhun/eslint-config', 'plugin:storybook/recommended'],
+  extends: ['@seolhun/eslint-config'],
   settings: {
     react: {
       version: 'detect',
@@ -14,5 +14,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': ['warn', {
       'additionalHooks': '(useIsoMorphicEffect)'
     }],
+    'perfectionist/sort-objects': 'off',
   }
 };

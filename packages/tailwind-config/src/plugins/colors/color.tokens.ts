@@ -1,9 +1,4 @@
 export const rootPaletteColors = {
-  // Brand Colors
-  'brand-primary': 'hsl(var(--color-brand-primary))',
-  'brand-secondary': 'hsl(var(--color-brand-secondary))',
-  'brand-tertiary': 'hsl(var(--color-brand-tertiary))',
-
   // Common Colors
   'common-black': 'hsl(var(--color-common-black))',
   'common-white': 'hsl(var(--color-common-white))',
@@ -141,12 +136,6 @@ export const rootPaletteColors = {
   'polargreen-800': 'hsl(var(--color-polargreen-800))',
   'polargreen-900': 'hsl(var(--color-polargreen-900))',
 
-  // Status
-  'status-cautionary': 'hsl(var(--color-status-cautionary))',
-  'status-informative': 'hsl(var(--color-status-informative))',
-  'status-negative': 'hsl(var(--color-status-negative))',
-  'status-positive': 'hsl(var(--color-status-positive))',
-
   // Sunrise Yellow
   'sunrise-10': 'hsl(var(--color-sunrise-10))',
   'sunrise-50': 'hsl(var(--color-sunrise-50))',
@@ -190,20 +179,67 @@ export const rootPaletteColors = {
 export type RootPaletteColorKey = keyof typeof rootPaletteColors;
 
 export const rootSystemColors = {
+  background: 'hsl(var(--background))',
+  border: 'hsl(var(--border))',
+  ring: 'hsl(var(--ring))',
+  foreground: 'hsl(var(--foreground))',
+  input: 'hsl(var(--input))',
+  muted: {
+    DEFAULT: 'hsl(var(--muted))',
+    foreground: 'hsl(var(--muted-foreground))',
+  },
+  card: {
+    DEFAULT: 'hsl(var(--card))',
+    foreground: 'hsl(var(--card-foreground))',
+  },
+  popover: {
+    DEFAULT: 'hsl(var(--popover))',
+    foreground: 'hsl(var(--popover-foreground))',
+  },
+
   // Intent Colors
-  danger: 'hsl(var(--color-danger))',
-  primary: 'hsl(var(--color-primary))',
-  success: 'hsl(var(--color-success))',
-  warning: 'hsl(var(--color-warning))',
+  accent: {
+    DEFAULT: 'hsl(var(--accent))',
+    foreground: 'hsl(var(--accent-foreground))',
+  },
+  primary: {
+    DEFAULT: 'hsl(var(--primary))',
+    foreground: 'hsl(var(--primary-foreground))',
+  },
+  secondary: {
+    DEFAULT: 'hsl(var(--secondary))',
+    foreground: 'hsl(var(--secondary-foreground))',
+  },
+  tertiary: {
+    DEFAULT: 'hsl(var(--tertiary))',
+    foreground: 'hsl(var(--tertiary-foreground))',
+  },
+  informative: {
+    DEFAULT: 'hsl(var(--informative))',
+    foreground: 'hsl(var(--informative-foreground))',
+  },
+  positive: {
+    DEFAULT: 'hsl(var(--positive))',
+    foreground: 'hsl(var(--positive-foreground))',
+  },
+  cautionary: {
+    DEFAULT: 'hsl(var(--cautionary))',
+    foreground: 'hsl(var(--cautionary-foreground))',
+  },
+  destructive: {
+    DEFAULT: 'hsl(var(--destructive))',
+    foreground: 'hsl(var(--destructive-foreground))',
+  },
+  negative: {
+    DEFAULT: 'hsl(var(--negative))',
+    foreground: 'hsl(var(--negative-foreground))',
+  },
 
   // Background Colors
   'background-alternative': 'hsl(var(--color-background-alternative))',
   'background-light': 'hsl(var(--color-background-light))',
   'background-normal': 'hsl(var(--color-background-normal))',
 
-  // Other System Colors
-  border: 'hsl(var(--color-border))',
-  error: 'hsl(var(--color-error))',
   'inverse-primary': 'hsl(var(--color-inverse-primary))',
   'inverse-static': 'hsl(var(--color-inverse-static))',
   'line-accent': 'hsl(var(--color-line-accent))',

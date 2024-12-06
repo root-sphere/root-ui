@@ -24,14 +24,15 @@ const meta = {
       control: 'select',
       description: 'The intent/purpose of the button which determines its color scheme',
       options: [
-        'default',
+        'accent',
         'primary',
         'secondary',
         'tertiary',
-        'success',
-        'warning',
-        'danger',
-        'info',
+        'informative',
+        'positive',
+        'cautionary',
+        'destructive',
+        'negative',
       ],
     },
     size: {
@@ -63,29 +64,29 @@ export const AllVariants: Story = {
         <h3 className="text-lg font-semibold">Brand Colors</h3>
 
         <div className="flex flex-col gap-4">
-          {/* Default */}
+          {/* Accent */}
           <div className="flex gap-4">
-            <Button intent="default" variant="solid">
-              Default Solid
+            <Button intent="accent" variant="outline">
+              Accent Outline
             </Button>
-            <Button intent="default" variant="outline">
-              Default Outline
+            <Button intent="accent" variant="solid">
+              Accent Solid
             </Button>
-            <Button intent="default" variant="ghost">
-              Default Ghost
+            <Button intent="accent" variant="ghost">
+              Accent Ghost
             </Button>
-            <Button intent="default" variant="link">
-              Default Link
+            <Button intent="accent" variant="link">
+              Accent Link
             </Button>
           </div>
 
           {/* Primary */}
           <div className="flex gap-4">
-            <Button intent="primary" variant="solid">
-              Primary Solid
-            </Button>
             <Button intent="primary" variant="outline">
               Primary Outline
+            </Button>
+            <Button intent="primary" variant="solid">
+              Primary Solid
             </Button>
             <Button intent="primary" variant="ghost">
               Primary Ghost
@@ -97,11 +98,11 @@ export const AllVariants: Story = {
 
           {/* Secondary */}
           <div className="flex gap-4">
-            <Button intent="secondary" variant="solid">
-              Secondary Solid
-            </Button>
             <Button intent="secondary" variant="outline">
               Secondary Outline
+            </Button>
+            <Button intent="secondary" variant="solid">
+              Secondary Solid
             </Button>
             <Button intent="secondary" variant="ghost">
               Secondary Ghost
@@ -113,11 +114,11 @@ export const AllVariants: Story = {
 
           {/* Tertiary */}
           <div className="flex gap-4">
-            <Button intent="tertiary" variant="solid">
-              Tertiary Solid
-            </Button>
             <Button intent="tertiary" variant="outline">
               Tertiary Outline
+            </Button>
+            <Button intent="tertiary" variant="solid">
+              Tertiary Solid
             </Button>
             <Button intent="tertiary" variant="ghost">
               Tertiary Ghost
@@ -134,67 +135,83 @@ export const AllVariants: Story = {
         <h3 className="text-lg font-semibold">Status Colors</h3>
 
         <div className="flex flex-col gap-4">
-          {/* Success */}
+          {/* Informative */}
           <div className="flex gap-4">
-            <Button intent="success" variant="solid">
-              Success Solid
+            <Button intent="informative" variant="outline">
+              Informative Outline
             </Button>
-            <Button intent="success" variant="outline">
-              Success Outline
+            <Button intent="informative" variant="solid">
+              Informative Solid
             </Button>
-            <Button intent="success" variant="ghost">
-              Success Ghost
+            <Button intent="informative" variant="ghost">
+              Informative Ghost
             </Button>
-            <Button intent="success" variant="link">
-              Success Link
+            <Button intent="informative" variant="link">
+              Informative Link
             </Button>
           </div>
 
-          {/* Warning */}
+          {/* Positive */}
           <div className="flex gap-4">
-            <Button intent="warning" variant="solid">
-              Warning Solid
+            <Button intent="positive" variant="outline">
+              Positive Outline
             </Button>
-            <Button intent="warning" variant="outline">
-              Warning Outline
+            <Button intent="positive" variant="solid">
+              Positive Solid
             </Button>
-            <Button intent="warning" variant="ghost">
-              Warning Ghost
+            <Button intent="positive" variant="ghost">
+              Positive Ghost
             </Button>
-            <Button intent="warning" variant="link">
-              Warning Link
+            <Button intent="positive" variant="link">
+              Positive Link
             </Button>
           </div>
 
-          {/* Danger */}
+          {/* Cautionary */}
           <div className="flex gap-4">
-            <Button intent="danger" variant="solid">
-              Danger Solid
+            <Button intent="cautionary" variant="outline">
+              Cautionary Outline
             </Button>
-            <Button intent="danger" variant="outline">
-              Danger Outline
+            <Button intent="cautionary" variant="solid">
+              Cautionary Solid
             </Button>
-            <Button intent="danger" variant="ghost">
-              Danger Ghost
+            <Button intent="cautionary" variant="ghost">
+              Cautionary Ghost
             </Button>
-            <Button intent="danger" variant="link">
-              Danger Link
+            <Button intent="cautionary" variant="link">
+              Cautionary Link
             </Button>
           </div>
 
-          {/* Info */}
+          {/* Destructive */}
           <div className="flex gap-4">
-            <Button intent="info" variant="solid">
-              Info Solid
+            <Button intent="destructive" variant="outline">
+              Destructive Outline
             </Button>
-            <Button intent="info" variant="outline">
-              Info Outline
+            <Button intent="destructive" variant="solid">
+              Destructive Solid
             </Button>
-            <Button intent="info" variant="ghost">
-              Info Ghost
+            <Button intent="destructive" variant="ghost">
+              Destructive Ghost
             </Button>
-            <Button intent="info" variant="link">
-              Info Link
+            <Button intent="destructive" variant="link">
+              Destructive Link
+            </Button>
+          </div>
+
+          {/* Negative */}
+          <div className="flex gap-4">
+            <Button intent="negative" variant="outline">
+              Negative Outline
+            </Button>
+            <Button intent="negative" variant="solid">
+              Negative Solid
+            </Button>
+            <Button intent="negative" variant="ghost">
+              Negative Ghost
+            </Button>
+            <Button intent="negative" variant="link">
+              Negative Link
             </Button>
           </div>
         </div>
@@ -245,11 +262,10 @@ export const Playground: Story = {
   },
 };
 
-// Individual stories for each intent
-export const Default: Story = {
+export const Accent: Story = {
   args: {
-    children: 'Default Button',
-    intent: 'default',
+    children: 'Accent Button',
+    intent: 'accent',
   },
 };
 
@@ -274,30 +290,30 @@ export const Tertiary: Story = {
   },
 };
 
-export const Success: Story = {
+export const Positive: Story = {
   args: {
-    children: 'Success Button',
-    intent: 'success',
+    children: 'Positive Button',
+    intent: 'positive',
   },
 };
 
-export const Warning: Story = {
+export const Cautionary: Story = {
   args: {
-    children: 'Warning Button',
-    intent: 'warning',
+    children: 'Cautionary Button',
+    intent: 'cautionary',
   },
 };
 
-export const Danger: Story = {
+export const Destructive: Story = {
   args: {
-    children: 'Danger Button',
-    intent: 'danger',
+    children: 'Destructive Button',
+    intent: 'destructive',
   },
 };
 
-export const Info: Story = {
+export const Informative: Story = {
   args: {
-    children: 'Info Button',
-    intent: 'info',
+    children: 'Informative Button',
+    intent: 'informative',
   },
 };

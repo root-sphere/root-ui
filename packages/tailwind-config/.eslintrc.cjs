@@ -14,5 +14,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': ['warn', {
       'additionalHooks': '(useIsoMorphicEffect)'
     }],
+    'perfectionist/sort-objects': 'off',
   }
 };
