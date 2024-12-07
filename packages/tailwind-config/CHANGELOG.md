@@ -1,5 +1,11 @@
 # @root-sphere/root-ui-tailwind
 
+## 0.2.0
+
+### Minor Changes
+
+- [`5eab25be8a9c7c2df10f0ddaf09c9a1696005aa3`](https://github.com/root-sphere/root-ui/commit/5eab25be8a9c7c2df10f0ddaf09c9a1696005aa3) Thanks [@Seolhun](https://github.com/Seolhun)! - chore:update version
+
 ## 0.1.0
 
 ### Minor Changes
