@@ -467,7 +467,7 @@ export const Signup = () => {
                     </a>
                   </div>
 
-                  <Button size="lg" intent="primary" type="submit">
+                  <Button size="lg" intent="primary" variant="solid" type="submit">
                     Get Started
                   </Button>
                 </div>

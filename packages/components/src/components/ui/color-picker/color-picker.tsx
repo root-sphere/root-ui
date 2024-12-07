@@ -90,7 +90,6 @@ export function ColorPicker({
     '#F97316',
     '#EC4899',
     '#EF4444',
-    '#22C55E',
     '#F59E0B',
     '#3B82F6',
     '#000000',
