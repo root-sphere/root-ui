@@ -13,7 +13,7 @@ const colorPickerVariants = tv({
     'focus-visible:ring-ring focus-visible:ring-offset-2',
   ],
   defaultVariants: {
-    intent: 'primary',
+    intent: 'default', // Changed to match input's default intent
     variant: 'outline',
   },
   slots: {
@@ -45,67 +45,12 @@ const colorPickerVariants = tv({
   },
   variants: {
     intent: {
-      accent: {
+      default: {
+        // Changed from primary to default to match input
         trigger: [
-          'border-accent text-accent',
-          'focus-visible:border-accent focus-visible:ring-accent',
-          'hover:border-accent hover:bg-accent/10',
-        ],
-      },
-      primary: {
-        trigger: [
-          'border-primary text-primary',
-          'focus-visible:border-primary focus-visible:ring-primary',
-          'hover:border-primary hover:bg-primary/10',
-        ],
-      },
-      secondary: {
-        trigger: [
-          'border-secondary text-secondary',
-          'focus-visible:border-secondary focus-visible:ring-secondary',
-          'hover:border-secondary hover:bg-secondary/10',
-        ],
-      },
-      tertiary: {
-        trigger: [
-          'border-tertiary text-tertiary',
-          'focus-visible:border-tertiary focus-visible:ring-tertiary',
-          'hover:border-tertiary hover:bg-tertiary/10',
-        ],
-      },
-      informative: {
-        trigger: [
-          'border-informative text-informative',
-          'focus-visible:border-informative focus-visible:ring-informative',
-          'hover:border-informative hover:bg-informative/10',
-        ],
-      },
-      positive: {
-        trigger: [
-          'border-positive text-positive',
-          'focus-visible:border-positive focus-visible:ring-positive',
-          'hover:border-positive hover:bg-positive/10',
-        ],
-      },
-      cautionary: {
-        trigger: [
-          'border-cautionary text-cautionary',
-          'focus-visible:border-cautionary focus-visible:ring-cautionary',
-          'hover:border-cautionary hover:bg-cautionary/10',
-        ],
-      },
-      destructive: {
-        trigger: [
-          'border-destructive text-destructive',
-          'focus-visible:border-destructive focus-visible:ring-destructive',
-          'hover:border-destructive hover:bg-destructive/10',
-        ],
-      },
-      negative: {
-        trigger: [
-          'border-negative text-negative',
-          'focus-visible:border-negative focus-visible:ring-negative',
-          'hover:border-negative hover:bg-negative/10',
+          'border-input text-font-primary',
+          'focus-visible:ring-primary',
+          'hover:ring-2 hover:ring-primary hover:ring-offset-2',
         ],
       },
     },
@@ -129,7 +74,7 @@ export interface ColorPickerProps extends ColorPickerVariants {
 export function ColorPicker({
   className,
   background,
-  intent = 'primary',
+  intent = 'default', // Changed to match input's default intent
   setBackground,
   variant = 'outline',
 }: ColorPickerProps) {

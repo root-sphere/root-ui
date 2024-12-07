@@ -7,6 +7,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Checkbox } from '@/components/ui/checkbox';
+import { ColorPicker } from '@/components/ui/color-picker';
 import {
   Form,
   FormControl,
@@ -164,7 +165,6 @@ export const Signup = () => {
                 </SelectContent>
               </Select>
             </div>
-            {/*
             <div className="grid flex-1 gap-8 lg:grid-cols-2">
               <div className="space-y-6">
                 <H1 variant="title-lg">Brand Colors</H1>
@@ -303,7 +303,7 @@ export const Signup = () => {
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
 
             <div className="space-y-6 border-t pt-6">
               <H1 variant="title-lg">Typography</H1>
@@ -340,7 +340,7 @@ export const Signup = () => {
           <div className="flex h-full flex-col gap-8">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-1 flex-col">
-                <div className="flex flex-col rounded-xl bg-background p-8 shadow-md">
+                <div className="flex flex-col rounded-xl bg-background p-8 shadow-md gap-4">
                   <div className="mb-8">
                     <H1 variant="title-lg">Signup</H1>
                   </div>
@@ -430,14 +430,7 @@ export const Signup = () => {
                         render={({ field }) => (
                           <FormItem className="flex flex-col">
                             <FormLabel>Birth Date</FormLabel>
-                            <Button
-                              type="button"
-                              variant="outline"
-                              className={cn(
-                                'w-full justify-start text-left font-normal',
-                                !field.value && 'text-muted-foreground',
-                              )}
-                            >
+                            <Button type="button" variant="outline">
                               {field.value ? field.value.toLocaleDateString() : 'Pick a date'}
                             </Button>
                             <Calendar
@@ -474,7 +467,7 @@ export const Signup = () => {
                     </a>
                   </div>
 
-                  <Button type="submit" size="lg" className="mt-8 w-full">
+                  <Button size="lg" intent="primary" type="submit">
                     Get Started
                   </Button>
                 </div>

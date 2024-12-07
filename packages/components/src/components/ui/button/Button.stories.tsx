@@ -64,6 +64,22 @@ export const AllVariants: Story = {
         <h3 className="text-lg font-semibold">Brand Colors</h3>
 
         <div className="flex flex-col gap-4">
+          {/* Default */}
+          <div className="flex gap-4">
+            <Button intent="default" variant="outline">
+              Default Outline
+            </Button>
+            <Button intent="default" variant="solid">
+              Default Solid
+            </Button>
+            <Button intent="default" variant="ghost">
+              Accent Ghost
+            </Button>
+            <Button intent="default" variant="link">
+              Accent Link
+            </Button>
+          </div>
+
           {/* Primary */}
           <div className="flex gap-4">
             <Button intent="primary" variant="outline">

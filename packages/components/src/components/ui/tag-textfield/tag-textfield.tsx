@@ -28,9 +28,9 @@ const tagTextFieldVariants = tv({
       'flex items-center rounded-sm px-2 py-1.5 text-sm outline-none',
       'cursor-default select-none',
       'transition-colors duration-150',
-      'hover:bg-accent hover:text-accent-foreground',
-      'focus:bg-accent focus:text-accent-foreground',
-      'data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground',
+      'hover:bg-primary hover:text-primary-foreground',
+      'focus:bg-primary focus:text-primary-foreground',
+      'data-[selected=true]:bg-primary data-[selected=true]:text-primary-foreground',
       'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
     ],
     tags: ['flex flex-wrap gap-1'],
@@ -50,7 +50,7 @@ const tagTextFieldVariants = tv({
     },
     active: {
       true: {
-        input: 'bg-accent text-accent-foreground',
+        input: 'bg-primary text-primary-foreground',
       },
     },
   },

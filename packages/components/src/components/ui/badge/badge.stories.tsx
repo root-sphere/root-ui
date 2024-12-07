@@ -23,7 +23,7 @@ const meta = {
       control: 'select',
       description: 'The intent/purpose of the badge which determines its color scheme',
       options: [
-        'accent',
+        'default',
         'primary',
         'secondary',
         'tertiary',
@@ -50,14 +50,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Playground: Story = {
-  args: {
-    children: 'Badge',
-    intent: 'primary',
-    variant: 'solid',
-  },
-};
-
 export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-col gap-8">
@@ -66,6 +58,22 @@ export const AllVariants: Story = {
         <h3 className="text-lg font-semibold">Brand Colors</h3>
 
         <div className="flex flex-col gap-4">
+          {/* Default */}
+          <div className="flex gap-4">
+            <Badge intent="default" variant="outline">
+              Default Outline
+            </Badge>
+            <Badge intent="default" variant="solid">
+              Default Solid
+            </Badge>
+            <Badge intent="default" variant="ghost">
+              Default Ghost
+            </Badge>
+            <Badge intent="default" variant="link">
+              Default Link
+            </Badge>
+          </div>
+
           {/* Primary */}
           <div className="flex gap-4">
             <Badge intent="primary" variant="outline">
@@ -223,6 +231,14 @@ export const AllVariants: Story = {
       </div>
     </div>
   ),
+};
+
+export const Playground: Story = {
+  args: {
+    children: 'Badge',
+    intent: 'primary',
+    variant: 'solid',
+  },
 };
 
 export const Sizes: Story = {
