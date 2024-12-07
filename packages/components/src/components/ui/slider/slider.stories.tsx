@@ -10,7 +10,6 @@ const meta = {
     disabled: false,
     max: 100,
     step: 1,
-    intent: 'accent',
   },
   argTypes: {
     defaultValue: {
@@ -39,7 +38,7 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  title: 'Components/Slider',
+  title: 'Forms/Slider',
 } satisfies Meta<typeof Slider>;
 
 export default meta;
@@ -50,17 +49,17 @@ export const AllVariants: Story = {
     <div className="flex flex-col gap-8 w-[400px]">
       <div className="flex flex-col gap-4">
         <h3 className="text-lg font-semibold">Single Value</h3>
-        <Slider defaultValue={[33]} max={100} step={1} intent="accent" />
+        <Slider defaultValue={[33]} max={100} step={1} />
       </div>
 
       <div className="flex flex-col gap-4">
         <h3 className="text-lg font-semibold">Range</h3>
-        <Slider defaultValue={[25, 75]} max={100} step={1} intent="accent" />
+        <Slider defaultValue={[25, 75]} max={100} step={1} />
       </div>
 
       <div className="flex flex-col gap-4">
         <h3 className="text-lg font-semibold">Disabled</h3>
-        <Slider defaultValue={[50]} disabled max={100} step={1} intent="accent" />
+        <Slider defaultValue={[50]} disabled max={100} step={1} />
       </div>
     </div>
   ),
@@ -72,7 +71,6 @@ export const Playground: Story = {
     disabled: false,
     max: 100,
     step: 1,
-    intent: 'accent',
   },
 };
 
@@ -81,7 +79,6 @@ export const SingleValue: Story = {
     defaultValue: [33],
     max: 100,
     step: 1,
-    intent: 'accent',
   },
 };
 
@@ -90,7 +87,6 @@ export const Range: Story = {
     defaultValue: [25, 75],
     max: 100,
     step: 1,
-    intent: 'accent',
   },
 };
 
@@ -100,6 +96,5 @@ export const Disabled: Story = {
     disabled: true,
     max: 100,
     step: 1,
-    intent: 'accent',
   },
 };

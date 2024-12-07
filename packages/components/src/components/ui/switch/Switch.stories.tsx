@@ -1,51 +1,71 @@
-import { StorybookContent } from '@/stories';
 import { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
 import { Switch } from './switch';
 
-export default {
+const meta: Meta<typeof Switch> = {
+  args: {
+    defaultChecked: false,
+    disabled: false,
+  },
+  argTypes: {
+    defaultChecked: {
+      control: 'boolean',
+      description: 'Whether the switch is checked by default',
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'Whether the switch is disabled',
+    },
+    size: {
+      control: 'select',
+      description: 'The size of the switch',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
   component: Switch,
-  title: 'Components/Switch',
+  parameters: {
+    layout: 'centered',
+  },
+  title: 'Forms/Switch',
 } satisfies Meta<typeof Switch>;
 
-const SwitchTemplate = () => {
-  return <Switch defaultChecked />;
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const AllVariants: Story = {
+  render: () => (
+    <div className="flex flex-col gap-8">
+      {/* Sizes */}
+      <div className="flex flex-col gap-4">
+        <h3 className="text-lg font-semibold">Sizes</h3>
+        <div className="flex gap-4">
+          <Switch defaultChecked size="sm" />
+          <Switch defaultChecked />
+          <Switch defaultChecked size="lg" />
+        </div>
+      </div>
+
+      {/* States */}
+      <div className="flex flex-col gap-4">
+        <h3 className="text-lg font-semibold">States</h3>
+        <div className="flex gap-4">
+          <Switch defaultChecked disabled />
+        </div>
+      </div>
+    </div>
+  ),
 };
 
-const SmallSwitchTemplate = () => {
-  return <Switch defaultChecked size="sm" />;
+export const Playground: Story = {
+  args: {
+    defaultChecked: true,
+    size: 'default',
+  },
 };
 
-const LargeSwitchTemplate = () => {
-  return <Switch defaultChecked size="lg" />;
-};
-
-const SuccessSwitchTemplate = () => {
-  return <Switch defaultChecked intent="success" />;
-};
-
-const DestructiveSwitchTemplate = () => {
-  return <Switch defaultChecked intent="danger" />;
-};
-
-const DisabledSwitchTemplate = () => {
-  return <Switch defaultChecked disabled />;
-};
-
-const SwitchStories = () => {
-  return (
-    <StorybookContent className="flex-col gap-4">
-      <SwitchTemplate />
-      <SmallSwitchTemplate />
-      <LargeSwitchTemplate />
-      <SuccessSwitchTemplate />
-      <DestructiveSwitchTemplate />
-      <DisabledSwitchTemplate />
-    </StorybookContent>
-  );
-};
-
-export const Default: StoryObj = {
-  render: SwitchStories,
+export const Default: Story = {
+  args: {
+    defaultChecked: true,
+  },
 };

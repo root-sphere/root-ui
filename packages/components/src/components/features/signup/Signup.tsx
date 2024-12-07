@@ -7,7 +7,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Checkbox } from '@/components/ui/checkbox';
-import { ColorPicker } from '@/components/ui/color-picker';
 import {
   Form,
   FormControl,
@@ -165,7 +164,7 @@ export const Signup = () => {
                 </SelectContent>
               </Select>
             </div>
-
+            {/*
             <div className="grid flex-1 gap-8 lg:grid-cols-2">
               <div className="space-y-6">
                 <H1 variant="title-lg">Brand Colors</H1>
@@ -304,7 +303,7 @@ export const Signup = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="space-y-6 border-t pt-6">
               <H1 variant="title-lg">Typography</H1>

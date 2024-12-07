@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 
 export default {
   component: Select,
-  title: 'Components/Select',
+  title: 'Forms/Select',
 };
 
 const SelectTemplate = () => {

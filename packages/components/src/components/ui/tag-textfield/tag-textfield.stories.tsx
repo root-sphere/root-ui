@@ -32,7 +32,7 @@ const meta = {
       options: ['sm', 'default', 'lg'],
     },
   },
-  title: 'Components/TagTextField',
+  title: 'Forms/TagTextField',
 } satisfies Meta<StoryProps>;
 
 export default meta;

@@ -32,7 +32,7 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  title: 'Components/TextField',
+  title: 'Forms/TextField',
 } satisfies Meta<TextFieldProps>;
 
 export default meta;
@@ -66,11 +66,11 @@ export const WithLoading: Story = {
   render: (args) => (
     <div className="w-[320px]">
       <TextField {...args}>
-        <TextFieldInput placeholder="Loading..." />
-        <TextFieldDivider />
         <TextFieldAction>
           <Loader2Icon className="animate-spin" />
         </TextFieldAction>
+        <TextFieldDivider />
+        <TextFieldInput placeholder="Loading..." />
       </TextField>
     </div>
   ),

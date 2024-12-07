@@ -16,17 +16,17 @@ const sliderVariants = tv({
       'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
       'disabled:pointer-events-none disabled:opacity-50',
     ],
-    track: 'relative h-2 w-full grow overflow-hidden rounded-full bg-secondary',
+    track: ['relative h-2 w-full grow overflow-hidden rounded-full bg-input'],
   },
   defaultVariants: {
-    intent: 'accent',
+    intent: 'default',
   },
   variants: {
     intent: {
-      accent: {
-        thumb: ['border-accent bg-background ring-offset-background'],
-        range: 'bg-accent',
-        track: 'bg-accent/10',
+      default: {
+        thumb: ['border-primary bg-background ring-offset-background'],
+        range: 'bg-primary',
+        track: 'bg-primary/10',
       },
     },
   },

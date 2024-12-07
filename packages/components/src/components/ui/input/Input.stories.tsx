@@ -17,14 +17,14 @@ const meta: Meta<typeof Input> = {
     intent: {
       control: 'select',
       description: 'The intent/purpose of the input which determines its color scheme',
-      options: ['accent'],
+      options: ['default'],
     },
   },
   component: Input,
   parameters: {
     layout: 'centered',
   },
-  title: 'Components/Input',
+  title: 'Forms/Input',
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -33,14 +33,14 @@ type Story = StoryObj<typeof meta>;
 export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-col gap-8">
-      {/* Accent Color */}
+      {/* default Color */}
       <div className="flex flex-col gap-4">
-        <h3 className="text-lg font-semibold">Accent Color</h3>
+        <h3 className="text-lg font-semibold">default Color</h3>
 
         <div className="flex flex-col gap-4">
-          {/* Accent */}
+          {/* default */}
           <div className="flex gap-4">
-            <Input intent="accent" placeholder="Accent Input" />
+            <Input placeholder="default Input" />
           </div>
         </div>
       </div>
@@ -59,15 +59,14 @@ export const AllVariants: Story = {
 
 export const Playground: Story = {
   args: {
-    intent: 'accent',
+    intent: 'default',
     placeholder: 'Enter text...',
   },
 };
 
-// Individual story for accent intent
-export const Accent: Story = {
+// Individual story for default intent
+export const Default: Story = {
   args: {
-    intent: 'accent',
-    placeholder: 'Accent Input',
+    placeholder: 'Default Input',
   },
 };
