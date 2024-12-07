@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: CI/CD
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.ROOT_SPHERE_GITHUB_TOKEN }}
       PUBLIC_NPM_TOKEN: ${{secrets.PUBLIC_NPM_TOKEN}}
-      
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
