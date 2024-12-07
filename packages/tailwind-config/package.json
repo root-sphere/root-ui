@@ -7,7 +7,7 @@
   },
   "name": "@root-sphere/root-ui-tailwind",
   "description": "Root Tailwind Config",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "publishConfig": {
     "access": "public"
   },
