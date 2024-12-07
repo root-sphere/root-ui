@@ -3,7 +3,7 @@ import { Slot } from '@radix-ui/react-slot';
 import * as React from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
 
-export const buttonVariants = tv({
+const buttonVariants = tv({
   base: [
     'inline-flex items-center justify-center gap-2',
     'whitespace-nowrap rounded-md text-sm font-medium',
@@ -14,21 +14,12 @@ export const buttonVariants = tv({
     '[&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   ],
   defaultVariants: {
-    intent: 'accent',
+    intent: 'primary',
     size: 'default',
     variant: 'outline',
   },
   variants: {
     intent: {
-      accent: [
-        'data-[variant=outline]:border-accent data-[variant=outline]:text-accent',
-        'data-[variant=outline]:hover:bg-accent data-[variant=outline]:hover:text-accent-foreground',
-        'data-[variant=solid]:border-accent data-[variant=solid]:bg-accent data-[variant=solid]:text-accent-foreground',
-        'data-[variant=solid]:hover:bg-accent/90',
-        'data-[variant=ghost]:text-accent hover:bg-accent/5',
-        'data-[variant=link]:text-accent',
-        'focus-visible:ring-accent',
-      ],
       primary: [
         'data-[variant=outline]:border-primary data-[variant=outline]:text-primary',
         'data-[variant=outline]:hover:bg-primary data-[variant=outline]:hover:text-primary-foreground',
@@ -117,16 +108,16 @@ export const buttonVariants = tv({
   },
 });
 
-export type ButtonVariants = VariantProps<typeof buttonVariants>;
+type ButtonVariants = VariantProps<typeof buttonVariants>;
 
 type ElementType = HTMLButtonElement;
 type ElementProps = React.ButtonHTMLAttributes<ElementType>;
 
-export interface ButtonProps extends ElementProps, ButtonVariants {
+interface ButtonProps extends ElementProps, ButtonVariants {
   asChild?: boolean;
 }
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, asChild = false, intent, size, variant, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
     return (
@@ -140,3 +131,5 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   },
 );
 Button.displayName = 'Button';
+
+export { Button, type ButtonProps, type ButtonVariants, buttonVariants };

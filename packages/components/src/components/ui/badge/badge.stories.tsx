@@ -5,6 +5,11 @@ import * as React from 'react';
 import { Badge } from './badge';
 
 const meta = {
+  title: 'Components/Badge',
+  component: Badge,
+  parameters: {
+    layout: 'centered',
+  },
   args: {
     children: 'Badge',
     variant: 'solid',
@@ -29,21 +34,29 @@ const meta = {
         'negative',
       ],
     },
+    size: {
+      control: 'select',
+      description: 'The size of the badge',
+      options: ['sm', 'default', 'lg', 'icon'],
+    },
     variant: {
       control: 'select',
       description: 'The visual style variant of the badge',
-      options: ['solid', 'outline', 'ghost'],
+      options: ['solid', 'outline', 'ghost', 'link'],
     },
   },
-  component: Badge,
-  parameters: {
-    layout: 'centered',
-  },
-  title: 'Components/Badge',
 } satisfies Meta<typeof Badge>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+export const Playground: Story = {
+  args: {
+    children: 'Badge',
+    intent: 'primary',
+    variant: 'solid',
+  },
+};
 
 export const AllVariants: Story = {
   render: () => (
@@ -53,19 +66,6 @@ export const AllVariants: Story = {
         <h3 className="text-lg font-semibold">Brand Colors</h3>
 
         <div className="flex flex-col gap-4">
-          {/* Accent */}
-          <div className="flex gap-4">
-            <Badge intent="accent" variant="outline">
-              Accent Outline
-            </Badge>
-            <Badge intent="accent" variant="solid">
-              Accent Solid
-            </Badge>
-            <Badge intent="accent" variant="ghost">
-              Accent Ghost
-            </Badge>
-          </div>
-
           {/* Primary */}
           <div className="flex gap-4">
             <Badge intent="primary" variant="outline">
@@ -76,6 +76,9 @@ export const AllVariants: Story = {
             </Badge>
             <Badge intent="primary" variant="ghost">
               Primary Ghost
+            </Badge>
+            <Badge intent="primary" variant="link">
+              Primary Link
             </Badge>
           </div>
 
@@ -90,6 +93,9 @@ export const AllVariants: Story = {
             <Badge intent="secondary" variant="ghost">
               Secondary Ghost
             </Badge>
+            <Badge intent="secondary" variant="link">
+              Secondary Link
+            </Badge>
           </div>
 
           {/* Tertiary */}
@@ -102,6 +108,9 @@ export const AllVariants: Story = {
             </Badge>
             <Badge intent="tertiary" variant="ghost">
               Tertiary Ghost
+            </Badge>
+            <Badge intent="tertiary" variant="link">
+              Tertiary Link
             </Badge>
           </div>
         </div>
@@ -123,6 +132,9 @@ export const AllVariants: Story = {
             <Badge intent="informative" variant="ghost">
               Informative Ghost
             </Badge>
+            <Badge intent="informative" variant="link">
+              Informative Link
+            </Badge>
           </div>
 
           {/* Positive */}
@@ -135,6 +147,9 @@ export const AllVariants: Story = {
             </Badge>
             <Badge intent="positive" variant="ghost">
               Positive Ghost
+            </Badge>
+            <Badge intent="positive" variant="link">
+              Positive Link
             </Badge>
           </div>
 
@@ -149,6 +164,9 @@ export const AllVariants: Story = {
             <Badge intent="cautionary" variant="ghost">
               Cautionary Ghost
             </Badge>
+            <Badge intent="cautionary" variant="link">
+              Cautionary Link
+            </Badge>
           </div>
 
           {/* Destructive */}
@@ -161,6 +179,9 @@ export const AllVariants: Story = {
             </Badge>
             <Badge intent="destructive" variant="ghost">
               Destructive Ghost
+            </Badge>
+            <Badge intent="destructive" variant="link">
+              Destructive Link
             </Badge>
           </div>
 
@@ -175,73 +196,59 @@ export const AllVariants: Story = {
             <Badge intent="negative" variant="ghost">
               Negative Ghost
             </Badge>
+            <Badge intent="negative" variant="link">
+              Negative Link
+            </Badge>
           </div>
+        </div>
+      </div>
+
+      {/* Sizes */}
+      <div className="flex flex-col gap-4">
+        <h3 className="text-lg font-semibold">Sizes</h3>
+        <div className="flex items-center gap-4">
+          <Badge size="sm" variant="solid">
+            Small
+          </Badge>
+          <Badge size="default" variant="solid">
+            Default
+          </Badge>
+          <Badge size="lg" variant="solid">
+            Large
+          </Badge>
+          <Badge size="icon" variant="solid">
+            <span>🔥</span>
+          </Badge>
         </div>
       </div>
     </div>
   ),
 };
 
-export const Playground: Story = {
-  args: {
-    children: 'Badge',
-    intent: 'primary',
-    variant: 'solid',
-  },
+export const Sizes: Story = {
+  render: () => (
+    <div className="flex items-center gap-4">
+      <Badge size="sm">Small</Badge>
+      <Badge size="default">Default</Badge>
+      <Badge size="lg">Large</Badge>
+      <Badge size="icon">
+        <span>🔥</span>
+      </Badge>
+    </div>
+  ),
 };
 
-export const Accent: Story = {
-  args: {
-    children: 'Accent Badge',
-    intent: 'accent',
-  },
-};
-
-export const Primary: Story = {
-  args: {
-    children: 'Primary Badge',
-    intent: 'primary',
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    children: 'Secondary Badge',
-    intent: 'secondary',
-  },
-};
-
-export const Tertiary: Story = {
-  args: {
-    children: 'Tertiary Badge',
-    intent: 'tertiary',
-  },
-};
-
-export const Positive: Story = {
-  args: {
-    children: 'Positive Badge',
-    intent: 'positive',
-  },
-};
-
-export const Cautionary: Story = {
-  args: {
-    children: 'Cautionary Badge',
-    intent: 'cautionary',
-  },
-};
-
-export const Destructive: Story = {
-  args: {
-    children: 'Destructive Badge',
-    intent: 'destructive',
-  },
-};
-
-export const Informative: Story = {
-  args: {
-    children: 'Informative Badge',
-    intent: 'informative',
-  },
+export const WithIcon: Story = {
+  render: () => (
+    <div className="flex gap-4">
+      <Badge>
+        <span>🔥</span>
+        With Icon
+      </Badge>
+      <Badge variant="solid">
+        With Icon
+        <span>🔥</span>
+      </Badge>
+    </div>
+  ),
 };

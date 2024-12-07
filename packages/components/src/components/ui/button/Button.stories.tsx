@@ -24,7 +24,7 @@ const meta = {
       control: 'select',
       description: 'The intent/purpose of the button which determines its color scheme',
       options: [
-        'accent',
+        'default',
         'primary',
         'secondary',
         'tertiary',
@@ -64,22 +64,6 @@ export const AllVariants: Story = {
         <h3 className="text-lg font-semibold">Brand Colors</h3>
 
         <div className="flex flex-col gap-4">
-          {/* Accent */}
-          <div className="flex gap-4">
-            <Button intent="accent" variant="outline">
-              Accent Outline
-            </Button>
-            <Button intent="accent" variant="solid">
-              Accent Solid
-            </Button>
-            <Button intent="accent" variant="ghost">
-              Accent Ghost
-            </Button>
-            <Button intent="accent" variant="link">
-              Accent Link
-            </Button>
-          </div>
-
           {/* Primary */}
           <div className="flex gap-4">
             <Button intent="primary" variant="outline">
@@ -259,13 +243,6 @@ export const Playground: Story = {
     intent: 'primary',
     size: 'default',
     variant: 'solid',
-  },
-};
-
-export const Accent: Story = {
-  args: {
-    children: 'Accent Button',
-    intent: 'accent',
   },
 };
 

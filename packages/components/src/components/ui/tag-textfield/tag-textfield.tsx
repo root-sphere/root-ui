@@ -36,20 +36,12 @@ const tagTextFieldVariants = tv({
     tags: ['flex flex-wrap gap-1'],
   },
   defaultVariants: {
-    intent: 'accent',
+    intent: 'default',
     size: 'default',
   },
   variants: {
     intent: {
-      accent: {},
-      primary: {},
-      secondary: {},
-      tertiary: {},
-      informative: {},
-      positive: {},
-      cautionary: {},
-      destructive: {},
-      negative: {},
+      default: {},
     },
     size: {
       sm: {},
@@ -107,7 +99,7 @@ const TagTextFieldRoot = ({
   onChange,
   disabled,
   size,
-  intent = 'accent',
+  intent = 'default',
   children,
   className,
 }: TagTextFieldProps) => {
@@ -344,7 +336,7 @@ TagTextFieldInput.displayName = 'TagTextFieldInput';
 
 const TagTextFieldTags = React.forwardRef<HTMLDivElement, React.ComponentProps<'div'>>(
   (props, ref) => {
-    const { tags, removeTag, size, disabled, intent } = useTagTextFieldContext();
+    const { tags, removeTag, size, disabled } = useTagTextFieldContext();
 
     return (
       <div ref={ref} className={tagTextFieldVariants().tags()} {...props}>
@@ -352,7 +344,6 @@ const TagTextFieldTags = React.forwardRef<HTMLDivElement, React.ComponentProps<'
           <Badge
             key={tag}
             variant="solid"
-            intent={intent ?? 'secondary'}
             className={size === 'sm' ? 'text-xs' : size === 'lg' ? 'text-base' : 'text-sm'}
           >
             {tag}

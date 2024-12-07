@@ -10,9 +10,10 @@ const textFieldVariants = tv({
       'ring-offset-background',
       'focus-within:outline-none focus-within:ring-2',
       'focus-within:ring-ring focus-within:ring-offset-2',
-      'disabled:cursor-not-allowed disabled:opacity-50',
+      'disabled:cursor-not-allowed disabled:opacity-70',
+      'read-only:cursor-default read-only:opacity-90',
       'transition-colors duration-200',
-      'group/field',
+      'group',
     ],
     input: [
       'h-full w-full bg-transparent',
@@ -21,37 +22,41 @@ const textFieldVariants = tv({
       'focus:outline-none',
       'disabled:cursor-not-allowed',
       'file:border-0 file:bg-transparent file:text-sm file:font-medium',
-      'group-hover/field:placeholder:text-muted-foreground/70',
+      'group-hover:placeholder:text-muted-foreground/70',
+      'read-only:cursor-default read-only:opacity-90',
     ],
     divider: [
       'w-[1px] my-auto',
-      'bg-accent/20',
+      'bg-input/20',
       'transition-colors duration-200',
-      'group-hover/field:bg-accent/30',
+      'group-hover:bg-input/30',
     ],
     action: [
       'flex items-center gap-2',
-      'text-accent',
+      'text-font-primary',
       'transition-colors duration-200',
       'focus-visible:outline-none',
-      'disabled:pointer-events-none disabled:opacity-50',
+      'disabled:pointer-events-none disabled:opacity-70',
     ],
   },
   defaultVariants: {
-    intent: 'accent',
+    intent: 'default',
     size: 'default',
   },
   variants: {
     intent: {
-      accent: {
+      default: {
         root: [
-          'border-accent text-accent',
-          'focus-within:border-accent focus-within:ring-accent',
-          'hover:border-accent/80 hover:bg-accent/5',
+          'border-input text-font-primary',
+          'focus-within:border-primary focus-within:ring-primary',
+          'hover:border-primary/80 hover:bg-primary/5',
         ],
-        input: ['text-accent placeholder:text-accent/50', 'group-hover/field:text-accent/90'],
-        divider: ['bg-accent/20'],
-        action: ['text-accent'],
+        input: [
+          'text-font-primary placeholder:text-font-secondary',
+          'group-hover:text-font-primary/90',
+        ],
+        divider: ['bg-input/20'],
+        action: ['text-font-primary'],
       },
     },
     size: {
