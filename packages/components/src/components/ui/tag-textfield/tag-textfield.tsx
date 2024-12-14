@@ -1,7 +1,7 @@
 'use client';
 
+import { useMergeRefs } from '@/hooks';
 import { preventDefault } from '@/utils/dom';
-import { useMergeRefs } from '@floating-ui/react';
 import { X as XIcon } from 'lucide-react';
 import * as React from 'react';
 import { tv, VariantProps } from 'tailwind-variants';
@@ -125,13 +125,13 @@ const TagTextFieldRoot = ({
 
 const TagTextFieldInput = React.forwardRef<HTMLInputElement, TagTextFieldInputProps>(
   ({ suggestions = [], ...props }, ref) => {
-    const { addTag, removeTag, tags, disabled, size, intent } = useTagTextFieldContext();
+    const { addTag, removeTag, tags, disabled, size } = useTagTextFieldContext();
     const [inputValue, setInputValue] = React.useState('');
     const [isOpen, setIsOpen] = React.useState(false);
     const [activeIndex, setActiveIndex] = React.useState(-1);
     const inputRef = React.useRef<HTMLInputElement>(null);
 
-    const mergedRefs = useMergeRefs([inputRef, ref]);
+    const mergedRefs = useMergeRefs(inputRef, ref);
 
     const suggestionsSet = React.useMemo(() => {
       return new Set(suggestions);

@@ -28,11 +28,11 @@
     --primary: var(--color-blue-50);
     --primary-foreground: var(--color-blue-5);
 
-    --secondary: var(--color-neutrals-90);
-    --secondary-foreground: var(--color-neutrals-5);
+    --secondary: var(--color-neutral-90);
+    --secondary-foreground: var(--color-neutral-5);
 
-    --tertiary: var(--color-neutrals-50);
-    --tertiary-foreground: var(--color-neutrals-5);
+    --tertiary: var(--color-neutral-50);
+    --tertiary-foreground: var(--color-neutral-5);
 
     --informative: var(--color-sky-50);
     --informative-foreground: var(--color-sky-5);
@@ -50,14 +50,14 @@
     --negative-foreground: var(--color-red-5);
 
     /* System Colors (Direct Assignment) */
-    --color-surface-bright: var(--color-neutrals-0);
-    --color-surface-dim: var(--color-neutrals-5);
-    --color-surface-normal: var(--color-neutrals-1);
+    --color-surface-bright: var(--color-neutral-0);
+    --color-surface-dim: var(--color-neutral-5);
+    --color-surface-normal: var(--color-neutral-1);
 
-    --color-font-primary: var(--color-neutrals-100);
-    --color-font-secondary: var(--color-neutrals-50);
-    --color-font-tertiary: var(--color-neutrals-20);
-    --color-font-placeholder: var(--color-neutrals-10);
+    --color-font-primary: var(--color-neutral-100);
+    --color-font-secondary: var(--color-neutral-50);
+    --color-font-tertiary: var(--color-neutral-20);
+    --color-font-placeholder: var(--color-neutral-10);
     --color-font-hashtag: var(--color-blue-50);
 
     /* * * * * * * * * * *
@@ -128,21 +128,21 @@
     /* * * * * * * * * * *
     * Palette Colors Start
     * * * * * * * * * * */
-    /* Neutrals */
-    --color-neutrals-0: 0 0% 100%;      /* #FFFFFF */
-    --color-neutrals-1: 0 0% 97%;       /* #F7F7F7 */
-    --color-neutrals-5: 0 0% 86%;       /* #DCDCDC */
-    --color-neutrals-10: 0 0% 77%;      /* #C4C4C4 */
-    --color-neutrals-20: 0 0% 69%;      /* #B0B0B0 */
-    --color-neutrals-30: 0 0% 61%;      /* #9B9B9B */
-    --color-neutrals-40: 0 0% 54%;      /* #8A8A8A */
-    --color-neutrals-50: 0 0% 45%;      /* #737373 */
-    --color-neutrals-60: 0 0% 36%;      /* #5C5C5C */
-    --color-neutrals-70: 0 0% 28%;      /* #474747 */
-    --color-neutrals-80: 0 0% 16%;      /* #2A2A2A */
-    --color-neutrals-90: 0 0% 9%;       /* #171717 */
-    --color-neutrals-95: 0 0% 6%;       /* #0F0F0F */
-    --color-neutrals-100: 0 0% 0%;      /* #000000 */
+    /* Neutral */
+    --color-neutral-0: 0 0% 100%;      /* #FFFFFF */
+    --color-neutral-1: 0 0% 97%;       /* #F7F7F7 */
+    --color-neutral-5: 0 0% 86%;       /* #DCDCDC */
+    --color-neutral-10: 0 0% 77%;      /* #C4C4C4 */
+    --color-neutral-20: 0 0% 69%;      /* #B0B0B0 */
+    --color-neutral-30: 0 0% 61%;      /* #9B9B9B */
+    --color-neutral-40: 0 0% 54%;      /* #8A8A8A */
+    --color-neutral-50: 0 0% 45%;      /* #737373 */
+    --color-neutral-60: 0 0% 36%;      /* #5C5C5C */
+    --color-neutral-70: 0 0% 28%;      /* #474747 */
+    --color-neutral-80: 0 0% 16%;      /* #2A2A2A */
+    --color-neutral-90: 0 0% 9%;       /* #171717 */
+    --color-neutral-95: 0 0% 6%;       /* #0F0F0F */
+    --color-neutral-100: 0 0% 0%;      /* #000000 */
 
     /* Blue */
     --color-blue-5: 213 98% 95%;        /* #E6F1FE */

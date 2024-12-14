@@ -3,6 +3,8 @@ export * from './button';
 export * from './calendar';
 export * from './checkbox';
 export * from './color-picker';
+export * from './floating';
+export * from './floating';
 export * from './form';
 export * from './input';
 export * from './label';
